@@ -1,0 +1,229 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_dx11_graphics" kind="class" prot="public">
+    <compoundname>Dx11Graphics</compoundname>
+    <includes refid="_dx11_graphics_8h" local="no">Dx11Graphics.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_dx11_graphics_1a7475373df3533725035e0a9b8d61c618" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Dx11Graphics::m_ScreenDepth</definition>
+        <argsstring></argsstring>
+        <name>m_ScreenDepth</name>
+        <initializer>{ 1000.0f }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11Graphics.h" line="7" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11Graphics.h" bodystart="7" bodyend="-1"/>
+        <referencedby refid="class_dx11_graphics_1a9e507922d353c6a815c804e672c9b656" compoundref="_dx11_graphics_8cpp" startline="12" endline="20">Initialize</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_dx11_graphics_1a7cf39c42e5477d84f31a5deb13d4730d" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Dx11Graphics::m_ScreenNear</definition>
+        <argsstring></argsstring>
+        <name>m_ScreenNear</name>
+        <initializer>{ 0.1f }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11Graphics.h" line="8" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11Graphics.h" bodystart="8" bodyend="-1"/>
+        <referencedby refid="class_dx11_graphics_1a9e507922d353c6a815c804e672c9b656" compoundref="_dx11_graphics_8cpp" startline="12" endline="20">Initialize</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_dx11_graphics_1a843ff38c2f778bfbd20c69a1d9364f54" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Dx11Graphics::m_vSync</definition>
+        <argsstring></argsstring>
+        <name>m_vSync</name>
+        <initializer>{ true }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11Graphics.h" line="9" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11Graphics.h" bodystart="9" bodyend="-1"/>
+        <referencedby refid="class_dx11_graphics_1a9e507922d353c6a815c804e672c9b656" compoundref="_dx11_graphics_8cpp" startline="12" endline="20">Initialize</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_dx11_graphics_1a3cc5c486c251fcd43991e86194d5bab2" prot="private" static="no" mutable="no">
+        <type><ref refid="class_d3_d11_engine" kindref="compound">D3D11Engine</ref></type>
+        <definition>D3D11Engine Dx11Graphics::m_DxEngine</definition>
+        <argsstring></argsstring>
+        <name>m_DxEngine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11Graphics.h" line="10" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11Graphics.h" bodystart="10" bodyend="-1"/>
+        <referencedby refid="class_dx11_graphics_1a40cb1058947853abc42e756e4f68ddb1" compoundref="_dx11_graphics_8cpp" startline="22" endline="25">Destroy</referencedby>
+        <referencedby refid="class_dx11_graphics_1a9e507922d353c6a815c804e672c9b656" compoundref="_dx11_graphics_8cpp" startline="12" endline="20">Initialize</referencedby>
+        <referencedby refid="class_dx11_graphics_1ab70ee35be358c0a67d4f350a87b35d7f" compoundref="_dx11_graphics_8cpp" startline="42" endline="51">Render</referencedby>
+        <referencedby refid="class_dx11_graphics_1ad0ace17622f926baf7b6f374ee5050b0" compoundref="_dx11_graphics_8cpp" startline="27" endline="40">UpdateFrame</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_dx11_graphics_1a9e9a462473fe50e93a0f29a133c95c58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Dx11Graphics::Dx11Graphics</definition>
+        <argsstring>()</argsstring>
+        <name>Dx11Graphics</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11Graphics.h" line="13" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11Graphics.cpp" bodystart="4" bodyend="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dx11_graphics_1a0b9495d63800ccc9f3a7b7d6fbffb0e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Dx11Graphics::~Dx11Graphics</definition>
+        <argsstring>()</argsstring>
+        <name>~Dx11Graphics</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11Graphics.h" line="14" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11Graphics.cpp" bodystart="8" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dx11_graphics_1a9e507922d353c6a815c804e672c9b656" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Dx11Graphics::Initialize</definition>
+        <argsstring>(HWND hWnd, int Width, int Height, bool fullscreen)</argsstring>
+        <name>Initialize</name>
+        <param>
+          <type>HWND</type>
+          <declname>hWnd</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Height</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>fullscreen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11Graphics.h" line="17" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11Graphics.cpp" bodystart="12" bodyend="20"/>
+        <references refid="class_d3_d11_engine_1a22760320f83b232dddf23c2ab44b44ec" compoundref="_d3_d11_engine_8cpp" startline="428" endline="458">D3D11Engine::Initialize</references>
+        <references refid="class_dx11_graphics_1a3cc5c486c251fcd43991e86194d5bab2" compoundref="_dx11_graphics_8h" startline="10">m_DxEngine</references>
+        <references refid="class_dx11_graphics_1a7475373df3533725035e0a9b8d61c618" compoundref="_dx11_graphics_8h" startline="7">m_ScreenDepth</references>
+        <references refid="class_dx11_graphics_1a7cf39c42e5477d84f31a5deb13d4730d" compoundref="_dx11_graphics_8h" startline="8">m_ScreenNear</references>
+        <references refid="class_dx11_graphics_1a843ff38c2f778bfbd20c69a1d9364f54" compoundref="_dx11_graphics_8h" startline="9">m_vSync</references>
+        <referencedby refid="class_dx11_system_1a9c80b246f8a0c28dd440fbf52a3fb829" compoundref="_dx11_system_8cpp" startline="32" endline="50">Dx11System::Initialize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_dx11_graphics_1a40cb1058947853abc42e756e4f68ddb1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dx11Graphics::Destroy</definition>
+        <argsstring>()</argsstring>
+        <name>Destroy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11Graphics.h" line="18" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11Graphics.cpp" bodystart="22" bodyend="25"/>
+        <references refid="class_d3_d11_engine_1a839ed06e48a83c5539ae7d9cd2504be4" compoundref="_d3_d11_engine_8cpp" startline="460" endline="467">D3D11Engine::Destroy</references>
+        <references refid="class_dx11_graphics_1a3cc5c486c251fcd43991e86194d5bab2" compoundref="_dx11_graphics_8h" startline="10">m_DxEngine</references>
+        <referencedby refid="class_dx11_system_1a600d8df8fad77747cad2cc5bf0845827" compoundref="_dx11_system_8cpp" startline="78" endline="83">Dx11System::Destroy</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_dx11_graphics_1ad0ace17622f926baf7b6f374ee5050b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Dx11Graphics::UpdateFrame</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateFrame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11Graphics.h" line="19" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11Graphics.cpp" bodystart="27" bodyend="40"/>
+        <references refid="class_dx11_graphics_1a3cc5c486c251fcd43991e86194d5bab2" compoundref="_dx11_graphics_8h" startline="10">m_DxEngine</references>
+        <references refid="class_dx11_graphics_1ab70ee35be358c0a67d4f350a87b35d7f" compoundref="_dx11_graphics_8cpp" startline="42" endline="51">Render</references>
+        <references refid="class_d3_d11_engine_1a18efa1fbaecef7cc95052d1d436ee788" compoundref="_d3_d11_engine_8cpp" startline="469" endline="473">D3D11Engine::UpdateFrame</references>
+        <referencedby refid="class_dx11_system_1a88d549d0769244c857dcfcad739e5eae" compoundref="_dx11_system_8cpp" startline="85" endline="96">Dx11System::UpdateFrame</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_dx11_graphics_1ab70ee35be358c0a67d4f350a87b35d7f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Dx11Graphics::Render</definition>
+        <argsstring>()</argsstring>
+        <name>Render</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11Graphics.h" line="22" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11Graphics.cpp" bodystart="42" bodyend="51"/>
+        <references refid="class_d3_d11_engine_1a7e08c10a18f9b4c51618e5b211585527" compoundref="_d3_d11_engine_8cpp" startline="21" endline="51">D3D11Engine::BeginScene</references>
+        <references refid="class_d3_d11_engine_1a0ca7ca6f48ad6d66046929ea0ba8f661" compoundref="_d3_d11_engine_8cpp" startline="59" endline="78">D3D11Engine::EndScene</references>
+        <references refid="class_dx11_graphics_1a3cc5c486c251fcd43991e86194d5bab2" compoundref="_dx11_graphics_8h" startline="10">m_DxEngine</references>
+        <references refid="class_d3_d11_engine_1a59eb4d77c8207bb5a0637af0a383256d" compoundref="_d3_d11_engine_8cpp" startline="53" endline="57">D3D11Engine::Render</references>
+        <referencedby refid="class_dx11_graphics_1ad0ace17622f926baf7b6f374ee5050b0" compoundref="_dx11_graphics_8cpp" startline="27" endline="40">UpdateFrame</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="9">
+        <label>Dx11Graphics</label>
+        <link refid="class_dx11_graphics"/>
+        <childnode refid="10" relation="usage">
+          <edgelabel>m_DxEngine</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>D3D11Engine</label>
+        <link refid="class_d3_d11_engine"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>m_VideoCard</edgelabel>
+          <edgelabel>m_AssetsPath</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>std::basic_string&lt; wchar_t &gt;</label>
+      </node>
+      <node id="11">
+        <label>std::wstring</label>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11Graphics.h" line="5" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11Graphics.h" bodystart="4" bodyend="23"/>
+    <listofallmembers>
+      <member refid="class_dx11_graphics_1a40cb1058947853abc42e756e4f68ddb1" prot="public" virt="non-virtual"><scope>Dx11Graphics</scope><name>Destroy</name></member>
+      <member refid="class_dx11_graphics_1a9e9a462473fe50e93a0f29a133c95c58" prot="public" virt="non-virtual"><scope>Dx11Graphics</scope><name>Dx11Graphics</name></member>
+      <member refid="class_dx11_graphics_1a9e507922d353c6a815c804e672c9b656" prot="public" virt="non-virtual"><scope>Dx11Graphics</scope><name>Initialize</name></member>
+      <member refid="class_dx11_graphics_1a3cc5c486c251fcd43991e86194d5bab2" prot="private" virt="non-virtual"><scope>Dx11Graphics</scope><name>m_DxEngine</name></member>
+      <member refid="class_dx11_graphics_1a7475373df3533725035e0a9b8d61c618" prot="private" virt="non-virtual"><scope>Dx11Graphics</scope><name>m_ScreenDepth</name></member>
+      <member refid="class_dx11_graphics_1a7cf39c42e5477d84f31a5deb13d4730d" prot="private" virt="non-virtual"><scope>Dx11Graphics</scope><name>m_ScreenNear</name></member>
+      <member refid="class_dx11_graphics_1a843ff38c2f778bfbd20c69a1d9364f54" prot="private" virt="non-virtual"><scope>Dx11Graphics</scope><name>m_vSync</name></member>
+      <member refid="class_dx11_graphics_1ab70ee35be358c0a67d4f350a87b35d7f" prot="private" virt="non-virtual"><scope>Dx11Graphics</scope><name>Render</name></member>
+      <member refid="class_dx11_graphics_1ad0ace17622f926baf7b6f374ee5050b0" prot="public" virt="non-virtual"><scope>Dx11Graphics</scope><name>UpdateFrame</name></member>
+      <member refid="class_dx11_graphics_1a0b9495d63800ccc9f3a7b7d6fbffb0e8" prot="public" virt="non-virtual"><scope>Dx11Graphics</scope><name>~Dx11Graphics</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

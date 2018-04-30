@@ -1,0 +1,394 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_dx11_system" kind="class" prot="public">
+    <compoundname>Dx11System</compoundname>
+    <includes refid="_dx11_system_8h" local="no">Dx11System.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_dx11_system_1a9b9e4b76fc93ad9791e9affba12ddbcb" prot="private" static="no" mutable="no">
+        <type>HINSTANCE</type>
+        <definition>HINSTANCE Dx11System::m_hInstance</definition>
+        <argsstring></argsstring>
+        <name>m_hInstance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.h" line="8" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.h" bodystart="8" bodyend="-1"/>
+        <referencedby refid="class_dx11_system_1a318b79da60a4ef633a5f3cbc909cbfd5" compoundref="_dx11_system_8cpp" startline="158" endline="171">DestroyDxWindow</referencedby>
+        <referencedby refid="class_dx11_system_1a21e0398697569ee19e81757305234c63" compoundref="_dx11_system_8cpp" startline="111" endline="156">InitializeDxWindow</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_dx11_system_1a71d1d29817975a425a77accadf8d776d" prot="private" static="no" mutable="no">
+        <type>std::wstring</type>
+        <definition>std::wstring Dx11System::m_strCmdLine</definition>
+        <argsstring></argsstring>
+        <name>m_strCmdLine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.h" line="9" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_dx11_system_1aa5ae125443745e9504cf4a61290f2b94" prot="private" static="no" mutable="no">
+        <type>HWND</type>
+        <definition>HWND Dx11System::m_hWnd</definition>
+        <argsstring></argsstring>
+        <name>m_hWnd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.h" line="10" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.h" bodystart="10" bodyend="-1"/>
+        <referencedby refid="class_dx11_system_1a318b79da60a4ef633a5f3cbc909cbfd5" compoundref="_dx11_system_8cpp" startline="158" endline="171">DestroyDxWindow</referencedby>
+        <referencedby refid="class_dx11_system_1a9c80b246f8a0c28dd440fbf52a3fb829" compoundref="_dx11_system_8cpp" startline="32" endline="50">Initialize</referencedby>
+        <referencedby refid="class_dx11_system_1a21e0398697569ee19e81757305234c63" compoundref="_dx11_system_8cpp" startline="111" endline="156">InitializeDxWindow</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_dx11_system_1a019c72e07a2f1ef042fb750465d31d1a" prot="private" static="no" mutable="no">
+        <type><ref refid="class_dx11_input" kindref="compound">Dx11Input</ref></type>
+        <definition>Dx11Input Dx11System::m_Input</definition>
+        <argsstring></argsstring>
+        <name>m_Input</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.h" line="11" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.h" bodystart="11" bodyend="-1"/>
+        <referencedby refid="class_dx11_system_1a600d8df8fad77747cad2cc5bf0845827" compoundref="_dx11_system_8cpp" startline="78" endline="83">Destroy</referencedby>
+        <referencedby refid="class_dx11_system_1a9c80b246f8a0c28dd440fbf52a3fb829" compoundref="_dx11_system_8cpp" startline="32" endline="50">Initialize</referencedby>
+        <referencedby refid="class_dx11_system_1ae620d1794586709dfd2acde01103c6aa" compoundref="_dx11_system_8cpp" startline="18" endline="30">MessageHandler</referencedby>
+        <referencedby refid="class_dx11_system_1a88d549d0769244c857dcfcad739e5eae" compoundref="_dx11_system_8cpp" startline="85" endline="96">UpdateFrame</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_dx11_system_1a14e553a4eeb94b3a47e02f49f0c4543f" prot="private" static="no" mutable="no">
+        <type><ref refid="class_dx11_graphics" kindref="compound">Dx11Graphics</ref></type>
+        <definition>Dx11Graphics Dx11System::m_Graphics</definition>
+        <argsstring></argsstring>
+        <name>m_Graphics</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.h" line="12" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.h" bodystart="12" bodyend="-1"/>
+        <referencedby refid="class_dx11_system_1a600d8df8fad77747cad2cc5bf0845827" compoundref="_dx11_system_8cpp" startline="78" endline="83">Destroy</referencedby>
+        <referencedby refid="class_dx11_system_1a9c80b246f8a0c28dd440fbf52a3fb829" compoundref="_dx11_system_8cpp" startline="32" endline="50">Initialize</referencedby>
+        <referencedby refid="class_dx11_system_1a88d549d0769244c857dcfcad739e5eae" compoundref="_dx11_system_8cpp" startline="85" endline="96">UpdateFrame</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_dx11_system_1a825fa2d8bb803a32681240a36c143dd1" prot="private" static="no" mutable="no">
+        <type>SIZE</type>
+        <definition>SIZE Dx11System::m_szWindow</definition>
+        <argsstring></argsstring>
+        <name>m_szWindow</name>
+        <initializer>{ 800, 600 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.h" line="13" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.h" bodystart="13" bodyend="-1"/>
+        <referencedby refid="class_dx11_system_1a9c80b246f8a0c28dd440fbf52a3fb829" compoundref="_dx11_system_8cpp" startline="32" endline="50">Initialize</referencedby>
+        <referencedby refid="class_dx11_system_1a21e0398697569ee19e81757305234c63" compoundref="_dx11_system_8cpp" startline="111" endline="156">InitializeDxWindow</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_dx11_system_1a5bcac93f737d79230761d06534dd87e3" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Dx11System::m_bFullScreen</definition>
+        <argsstring></argsstring>
+        <name>m_bFullScreen</name>
+        <initializer>{ false }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.h" line="14" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.h" bodystart="14" bodyend="-1"/>
+        <referencedby refid="class_dx11_system_1a318b79da60a4ef633a5f3cbc909cbfd5" compoundref="_dx11_system_8cpp" startline="158" endline="171">DestroyDxWindow</referencedby>
+        <referencedby refid="class_dx11_system_1a9c80b246f8a0c28dd440fbf52a3fb829" compoundref="_dx11_system_8cpp" startline="32" endline="50">Initialize</referencedby>
+        <referencedby refid="class_dx11_system_1a21e0398697569ee19e81757305234c63" compoundref="_dx11_system_8cpp" startline="111" endline="156">InitializeDxWindow</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_dx11_system_1a0972a77582d54aec49fa9f9b6d21aff2" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Dx11System::m_bRuning</definition>
+        <argsstring></argsstring>
+        <name>m_bRuning</name>
+        <initializer>{ false }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.h" line="15" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.h" bodystart="15" bodyend="-1"/>
+        <referencedby refid="class_dx11_system_1a269968e3a450029fc5de46906ca1acbe" compoundref="_dx11_system_8cpp" startline="52" endline="76">Run</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_dx11_system_1a952bff8ed6342fc0157f55875cdbac1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Dx11System::Dx11System</definition>
+        <argsstring>(_In_ HINSTANCE hInstance, _In_ LPCWSTR lpCmdLine)</argsstring>
+        <name>Dx11System</name>
+        <param>
+          <type>_In_ HINSTANCE</type>
+          <declname>hInstance</declname>
+        </param>
+        <param>
+          <type>_In_ LPCWSTR</type>
+          <declname>lpCmdLine</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.h" line="18" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.cpp" bodystart="8" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dx11_system_1af57367b43233a21449d340f63e075be1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Dx11System::~Dx11System</definition>
+        <argsstring>()</argsstring>
+        <name>~Dx11System</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.h" line="19" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.cpp" bodystart="14" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dx11_system_1ae620d1794586709dfd2acde01103c6aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LRESULT CALLBACK</type>
+        <definition>LRESULT Dx11System::MessageHandler</definition>
+        <argsstring>(HWND hwnd, UINT umsg, WPARAM wparam, LPARAM lparam)</argsstring>
+        <name>MessageHandler</name>
+        <param>
+          <type>HWND</type>
+          <declname>hwnd</declname>
+        </param>
+        <param>
+          <type>UINT</type>
+          <declname>umsg</declname>
+        </param>
+        <param>
+          <type>WPARAM</type>
+          <declname>wparam</declname>
+        </param>
+        <param>
+          <type>LPARAM</type>
+          <declname>lparam</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.h" line="22" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.cpp" bodystart="18" bodyend="30"/>
+        <references refid="class_dx11_input_1a8f52f9501bd5c15b60c1a1d25965bc83" compoundref="_dx11_input_8cpp" startline="29" endline="32">Dx11Input::KeyDown</references>
+        <references refid="class_dx11_input_1a63c742a7fca71e4d11f4f7f0ebaff583" compoundref="_dx11_input_8cpp" startline="34" endline="37">Dx11Input::KeyUp</references>
+        <references refid="class_dx11_system_1a019c72e07a2f1ef042fb750465d31d1a" compoundref="_dx11_system_8h" startline="11">m_Input</references>
+        <referencedby refid="_dx11_system_8h_1a3f4c854bca0fe97a24dd96e03bd74d39" compoundref="_dx11_system_8cpp" startline="173" endline="183">DxWndProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_dx11_system_1a9c80b246f8a0c28dd440fbf52a3fb829" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Dx11System::Initialize</definition>
+        <argsstring>(LPCWSTR szTitle)</argsstring>
+        <name>Initialize</name>
+        <param>
+          <type>LPCWSTR</type>
+          <declname>szTitle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.h" line="23" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.cpp" bodystart="32" bodyend="50"/>
+        <references refid="class_dx11_input_1a506357214613ef0bd788696ebb9e401e" compoundref="_dx11_input_8cpp" startline="12" endline="18">Dx11Input::Initialize</references>
+        <references refid="class_dx11_graphics_1a9e507922d353c6a815c804e672c9b656" compoundref="_dx11_graphics_8cpp" startline="12" endline="20">Dx11Graphics::Initialize</references>
+        <references refid="class_dx11_system_1a21e0398697569ee19e81757305234c63" compoundref="_dx11_system_8cpp" startline="111" endline="156">InitializeDxWindow</references>
+        <references refid="class_dx11_system_1a5bcac93f737d79230761d06534dd87e3" compoundref="_dx11_system_8h" startline="14">m_bFullScreen</references>
+        <references refid="class_dx11_system_1a14e553a4eeb94b3a47e02f49f0c4543f" compoundref="_dx11_system_8h" startline="12">m_Graphics</references>
+        <references refid="class_dx11_system_1aa5ae125443745e9504cf4a61290f2b94" compoundref="_dx11_system_8h" startline="10">m_hWnd</references>
+        <references refid="class_dx11_system_1a019c72e07a2f1ef042fb750465d31d1a" compoundref="_dx11_system_8h" startline="11">m_Input</references>
+        <references refid="class_dx11_system_1a825fa2d8bb803a32681240a36c143dd1" compoundref="_dx11_system_8h" startline="13">m_szWindow</references>
+        <referencedby refid="_dx11_l02_8cpp_1a1e683c5a19c00d05cd803e46b805e339" compoundref="_dx11_l02_8cpp" startline="12" endline="31">wWinMain</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_dx11_system_1a269968e3a450029fc5de46906ca1acbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dx11System::Run</definition>
+        <argsstring>()</argsstring>
+        <name>Run</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.h" line="24" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.cpp" bodystart="52" bodyend="76"/>
+        <references refid="class_dx11_system_1a0972a77582d54aec49fa9f9b6d21aff2" compoundref="_dx11_system_8h" startline="15">m_bRuning</references>
+        <references refid="class_dx11_system_1a88d549d0769244c857dcfcad739e5eae" compoundref="_dx11_system_8cpp" startline="85" endline="96">UpdateFrame</references>
+        <referencedby refid="_dx11_l02_8cpp_1a1e683c5a19c00d05cd803e46b805e339" compoundref="_dx11_l02_8cpp" startline="12" endline="31">wWinMain</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_dx11_system_1a600d8df8fad77747cad2cc5bf0845827" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dx11System::Destroy</definition>
+        <argsstring>()</argsstring>
+        <name>Destroy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.h" line="25" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.cpp" bodystart="78" bodyend="83"/>
+        <references refid="class_dx11_input_1abdc13a9885b04fae023fdc3eff5b8eee" compoundref="_dx11_input_8cpp" startline="20" endline="22">Dx11Input::Destroy</references>
+        <references refid="class_dx11_graphics_1a40cb1058947853abc42e756e4f68ddb1" compoundref="_dx11_graphics_8cpp" startline="22" endline="25">Dx11Graphics::Destroy</references>
+        <references refid="class_dx11_system_1a318b79da60a4ef633a5f3cbc909cbfd5" compoundref="_dx11_system_8cpp" startline="158" endline="171">DestroyDxWindow</references>
+        <references refid="class_dx11_system_1a14e553a4eeb94b3a47e02f49f0c4543f" compoundref="_dx11_system_8h" startline="12">m_Graphics</references>
+        <references refid="class_dx11_system_1a019c72e07a2f1ef042fb750465d31d1a" compoundref="_dx11_system_8h" startline="11">m_Input</references>
+        <referencedby refid="_dx11_l02_8cpp_1a1e683c5a19c00d05cd803e46b805e339" compoundref="_dx11_l02_8cpp" startline="12" endline="31">wWinMain</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_dx11_system_1a88d549d0769244c857dcfcad739e5eae" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Dx11System::UpdateFrame</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateFrame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.h" line="28" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.cpp" bodystart="85" bodyend="96"/>
+        <references refid="class_dx11_input_1a40e4ccd8a0a624b4e3fcfd5d9890f91f" compoundref="_dx11_input_8cpp" startline="24" endline="27">Dx11Input::IsKeyDown</references>
+        <references refid="class_dx11_system_1a14e553a4eeb94b3a47e02f49f0c4543f" compoundref="_dx11_system_8h" startline="12">m_Graphics</references>
+        <references refid="class_dx11_system_1a019c72e07a2f1ef042fb750465d31d1a" compoundref="_dx11_system_8h" startline="11">m_Input</references>
+        <references refid="class_dx11_graphics_1ad0ace17622f926baf7b6f374ee5050b0" compoundref="_dx11_graphics_8cpp" startline="27" endline="40">Dx11Graphics::UpdateFrame</references>
+        <referencedby refid="class_dx11_system_1a269968e3a450029fc5de46906ca1acbe" compoundref="_dx11_system_8cpp" startline="52" endline="76">Run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_dx11_system_1a21e0398697569ee19e81757305234c63" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Dx11System::InitializeDxWindow</definition>
+        <argsstring>(LPCWSTR szTitle)</argsstring>
+        <name>InitializeDxWindow</name>
+        <param>
+          <type>LPCWSTR</type>
+          <declname>szTitle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.h" line="29" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.cpp" bodystart="111" bodyend="156"/>
+        <references refid="_dx11_system_8cpp_1a3f4c854bca0fe97a24dd96e03bd74d39" compoundref="_dx11_system_8cpp" startline="173" endline="183">DxWndProc</references>
+        <references refid="class_dx11_system_1a5bcac93f737d79230761d06534dd87e3" compoundref="_dx11_system_8h" startline="14">m_bFullScreen</references>
+        <references refid="class_dx11_system_1a9b9e4b76fc93ad9791e9affba12ddbcb" compoundref="_dx11_system_8h" startline="8">m_hInstance</references>
+        <references refid="class_dx11_system_1aa5ae125443745e9504cf4a61290f2b94" compoundref="_dx11_system_8h" startline="10">m_hWnd</references>
+        <references refid="class_dx11_system_1a825fa2d8bb803a32681240a36c143dd1" compoundref="_dx11_system_8h" startline="13">m_szWindow</references>
+        <references refid="_dx11_system_8cpp_1aeb15465e1940f240850ab76446b63afc" compoundref="_dx11_system_8cpp" startline="4">szWindowClass</references>
+        <references refid="_dx11_system_8cpp_1a7afc04d0d43f5503cf702cc7eb61ec4d" compoundref="_dx11_system_8cpp" startline="104" endline="109">WindowStyle</references>
+        <references refid="_dx11_system_8cpp_1ae01fd09a45688fad837a6dbd69e400b2" compoundref="_dx11_system_8cpp" startline="98" endline="103">WindowStyleEx</references>
+        <referencedby refid="class_dx11_system_1a9c80b246f8a0c28dd440fbf52a3fb829" compoundref="_dx11_system_8cpp" startline="32" endline="50">Initialize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_dx11_system_1a318b79da60a4ef633a5f3cbc909cbfd5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dx11System::DestroyDxWindow</definition>
+        <argsstring>()</argsstring>
+        <name>DestroyDxWindow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.h" line="30" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.cpp" bodystart="158" bodyend="171"/>
+        <references refid="class_dx11_system_1a5bcac93f737d79230761d06534dd87e3" compoundref="_dx11_system_8h" startline="14">m_bFullScreen</references>
+        <references refid="class_dx11_system_1a9b9e4b76fc93ad9791e9affba12ddbcb" compoundref="_dx11_system_8h" startline="8">m_hInstance</references>
+        <references refid="class_dx11_system_1aa5ae125443745e9504cf4a61290f2b94" compoundref="_dx11_system_8h" startline="10">m_hWnd</references>
+        <references refid="_dx11_system_8cpp_1aeb15465e1940f240850ab76446b63afc" compoundref="_dx11_system_8cpp" startline="4">szWindowClass</references>
+        <referencedby refid="class_dx11_system_1a600d8df8fad77747cad2cc5bf0845827" compoundref="_dx11_system_8cpp" startline="78" endline="83">Destroy</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="17">
+        <label>Dx11Graphics</label>
+        <link refid="class_dx11_graphics"/>
+        <childnode refid="18" relation="usage">
+          <edgelabel>m_DxEngine</edgelabel>
+        </childnode>
+      </node>
+      <node id="18">
+        <label>D3D11Engine</label>
+        <link refid="class_d3_d11_engine"/>
+        <childnode refid="19" relation="usage">
+          <edgelabel>m_VideoCard</edgelabel>
+          <edgelabel>m_AssetsPath</edgelabel>
+        </childnode>
+      </node>
+      <node id="20">
+        <label>std::basic_string&lt; wchar_t &gt;</label>
+      </node>
+      <node id="16">
+        <label>Dx11System</label>
+        <link refid="class_dx11_system"/>
+        <childnode refid="17" relation="usage">
+          <edgelabel>m_Graphics</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>m_Input</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>m_strCmdLine</edgelabel>
+        </childnode>
+      </node>
+      <node id="19">
+        <label>std::wstring</label>
+        <childnode refid="20" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>Dx11Input</label>
+        <link refid="class_dx11_input"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.h" line="6" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.h" bodystart="5" bodyend="31"/>
+    <listofallmembers>
+      <member refid="class_dx11_system_1a600d8df8fad77747cad2cc5bf0845827" prot="public" virt="non-virtual"><scope>Dx11System</scope><name>Destroy</name></member>
+      <member refid="class_dx11_system_1a318b79da60a4ef633a5f3cbc909cbfd5" prot="private" virt="non-virtual"><scope>Dx11System</scope><name>DestroyDxWindow</name></member>
+      <member refid="class_dx11_system_1a952bff8ed6342fc0157f55875cdbac1d" prot="public" virt="non-virtual"><scope>Dx11System</scope><name>Dx11System</name></member>
+      <member refid="class_dx11_system_1a9c80b246f8a0c28dd440fbf52a3fb829" prot="public" virt="non-virtual"><scope>Dx11System</scope><name>Initialize</name></member>
+      <member refid="class_dx11_system_1a21e0398697569ee19e81757305234c63" prot="private" virt="non-virtual"><scope>Dx11System</scope><name>InitializeDxWindow</name></member>
+      <member refid="class_dx11_system_1a5bcac93f737d79230761d06534dd87e3" prot="private" virt="non-virtual"><scope>Dx11System</scope><name>m_bFullScreen</name></member>
+      <member refid="class_dx11_system_1a0972a77582d54aec49fa9f9b6d21aff2" prot="private" virt="non-virtual"><scope>Dx11System</scope><name>m_bRuning</name></member>
+      <member refid="class_dx11_system_1a14e553a4eeb94b3a47e02f49f0c4543f" prot="private" virt="non-virtual"><scope>Dx11System</scope><name>m_Graphics</name></member>
+      <member refid="class_dx11_system_1a9b9e4b76fc93ad9791e9affba12ddbcb" prot="private" virt="non-virtual"><scope>Dx11System</scope><name>m_hInstance</name></member>
+      <member refid="class_dx11_system_1aa5ae125443745e9504cf4a61290f2b94" prot="private" virt="non-virtual"><scope>Dx11System</scope><name>m_hWnd</name></member>
+      <member refid="class_dx11_system_1a019c72e07a2f1ef042fb750465d31d1a" prot="private" virt="non-virtual"><scope>Dx11System</scope><name>m_Input</name></member>
+      <member refid="class_dx11_system_1a71d1d29817975a425a77accadf8d776d" prot="private" virt="non-virtual"><scope>Dx11System</scope><name>m_strCmdLine</name></member>
+      <member refid="class_dx11_system_1a825fa2d8bb803a32681240a36c143dd1" prot="private" virt="non-virtual"><scope>Dx11System</scope><name>m_szWindow</name></member>
+      <member refid="class_dx11_system_1ae620d1794586709dfd2acde01103c6aa" prot="public" virt="non-virtual"><scope>Dx11System</scope><name>MessageHandler</name></member>
+      <member refid="class_dx11_system_1a269968e3a450029fc5de46906ca1acbe" prot="public" virt="non-virtual"><scope>Dx11System</scope><name>Run</name></member>
+      <member refid="class_dx11_system_1a88d549d0769244c857dcfcad739e5eae" prot="private" virt="non-virtual"><scope>Dx11System</scope><name>UpdateFrame</name></member>
+      <member refid="class_dx11_system_1af57367b43233a21449d340f63e075be1" prot="public" virt="non-virtual"><scope>Dx11System</scope><name>~Dx11System</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

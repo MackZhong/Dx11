@@ -1,0 +1,427 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_dx11_system_8cpp" kind="file">
+    <compoundname>Dx11System.cpp</compoundname>
+    <includes refid="pch_8h" local="yes">pch.h</includes>
+    <includes refid="_dx11_system_8h" local="yes">Dx11System.h</includes>
+    <incdepgraph>
+      <node id="121">
+        <label>D:/Documents/VS2017/repos/Dx11/Dx11L01/Dx11System.cpp</label>
+        <link refid="Dx11System.cpp"/>
+        <childnode refid="122" relation="include">
+        </childnode>
+        <childnode refid="139" relation="include">
+        </childnode>
+      </node>
+      <node id="125">
+        <label>windows.h</label>
+      </node>
+      <node id="126">
+        <label>stdlib.h</label>
+      </node>
+      <node id="124">
+        <label>SDKDDKVer.h</label>
+      </node>
+      <node id="136">
+        <label>wrl.h</label>
+      </node>
+      <node id="128">
+        <label>string</label>
+      </node>
+      <node id="132">
+        <label>D3DCompiler.h</label>
+      </node>
+      <node id="141">
+        <label>Dx11Graphics.h</label>
+        <link refid="_dx11_graphics_8h"/>
+        <childnode refid="142" relation="include">
+        </childnode>
+      </node>
+      <node id="130">
+        <label>exception</label>
+      </node>
+      <node id="138">
+        <label>DX11Helper.h</label>
+        <link refid="_d_x11_helper_8h"/>
+      </node>
+      <node id="142">
+        <label>D3D11Engine.h</label>
+        <link refid="_d3_d11_engine_8h"/>
+      </node>
+      <node id="131">
+        <label>D3d11_4.h</label>
+      </node>
+      <node id="135">
+        <label>dxgi1_4.h</label>
+      </node>
+      <node id="123">
+        <label>targetver.h</label>
+        <link refid="targetver_8h"/>
+        <childnode refid="124" relation="include">
+        </childnode>
+      </node>
+      <node id="133">
+        <label>DirectXMath.h</label>
+      </node>
+      <node id="140">
+        <label>Dx11Input.h</label>
+        <link refid="_dx11_input_8h"/>
+      </node>
+      <node id="129">
+        <label>iostream</label>
+      </node>
+      <node id="134">
+        <label>DirectXColors.h</label>
+      </node>
+      <node id="139">
+        <label>Dx11System.h</label>
+        <link refid="_dx11_system_8h"/>
+        <childnode refid="140" relation="include">
+        </childnode>
+        <childnode refid="141" relation="include">
+        </childnode>
+      </node>
+      <node id="122">
+        <label>pch.h</label>
+        <link refid="pch_8h"/>
+        <childnode refid="123" relation="include">
+        </childnode>
+        <childnode refid="125" relation="include">
+        </childnode>
+        <childnode refid="126" relation="include">
+        </childnode>
+        <childnode refid="127" relation="include">
+        </childnode>
+        <childnode refid="128" relation="include">
+        </childnode>
+        <childnode refid="129" relation="include">
+        </childnode>
+        <childnode refid="130" relation="include">
+        </childnode>
+        <childnode refid="131" relation="include">
+        </childnode>
+        <childnode refid="132" relation="include">
+        </childnode>
+        <childnode refid="133" relation="include">
+        </childnode>
+        <childnode refid="134" relation="include">
+        </childnode>
+        <childnode refid="135" relation="include">
+        </childnode>
+        <childnode refid="136" relation="include">
+        </childnode>
+        <childnode refid="137" relation="include">
+        </childnode>
+        <childnode refid="138" relation="include">
+        </childnode>
+      </node>
+      <node id="137">
+        <label>shellapi.h</label>
+      </node>
+      <node id="127">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_dx11_system_8cpp_1aeb15465e1940f240850ab76446b63afc" prot="public" static="no" mutable="no">
+        <type>wchar_t</type>
+        <definition>wchar_t szWindowClass[]</definition>
+        <argsstring>[]</argsstring>
+        <name>szWindowClass</name>
+        <initializer>= L&quot;DirectX12WindowClass&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L01/Dx11System.cpp" line="4" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L01/Dx11System.cpp" bodystart="4" bodyend="-1"/>
+        <referencedby refid="class_dx11_system_1a318b79da60a4ef633a5f3cbc909cbfd5" compoundref="_dx11_system_8cpp" startline="162" endline="175">Dx11System::DestroyDxWindow</referencedby>
+        <referencedby refid="class_dx11_system_1a21e0398697569ee19e81757305234c63" compoundref="_dx11_system_8cpp" startline="115" endline="160">Dx11System::InitializeDxWindow</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="_dx11_system_8cpp_1ac898127dc7a12ebe36128e9cea6940f3" prot="public" static="yes" mutable="no">
+        <type><ref refid="class_dx11_system" kindref="compound">Dx11System</ref> *</type>
+        <definition>Dx11System* DxSystemHandle</definition>
+        <argsstring></argsstring>
+        <name>DxSystemHandle</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L01/Dx11System.cpp" line="6" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L01/Dx11System.cpp" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_dx11_system_8cpp_1ae01fd09a45688fad837a6dbd69e400b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DWORD</type>
+        <definition>DWORD WindowStyleEx</definition>
+        <argsstring>(bool fullscreen)</argsstring>
+        <name>WindowStyleEx</name>
+        <param>
+          <type>bool</type>
+          <declname>fullscreen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L01/Dx11System.cpp" line="102" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L01/Dx11System.cpp" bodystart="102" bodyend="107"/>
+        <referencedby refid="class_dx11_system_1a21e0398697569ee19e81757305234c63" compoundref="_dx11_system_8cpp" startline="115" endline="160">Dx11System::InitializeDxWindow</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_dx11_system_8cpp_1a7afc04d0d43f5503cf702cc7eb61ec4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DWORD</type>
+        <definition>DWORD WindowStyle</definition>
+        <argsstring>(bool fullscreen)</argsstring>
+        <name>WindowStyle</name>
+        <param>
+          <type>bool</type>
+          <declname>fullscreen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L01/Dx11System.cpp" line="108" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L01/Dx11System.cpp" bodystart="108" bodyend="113"/>
+        <referencedby refid="class_dx11_system_1a21e0398697569ee19e81757305234c63" compoundref="_dx11_system_8cpp" startline="115" endline="160">Dx11System::InitializeDxWindow</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_dx11_system_8cpp_1a3f4c854bca0fe97a24dd96e03bd74d39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LRESULT CALLBACK</type>
+        <definition>LRESULT CALLBACK DxWndProc</definition>
+        <argsstring>(HWND hwnd, UINT umsg, WPARAM wparam, LPARAM lparam)</argsstring>
+        <name>DxWndProc</name>
+        <param>
+          <type>HWND</type>
+          <declname>hwnd</declname>
+        </param>
+        <param>
+          <type>UINT</type>
+          <declname>umsg</declname>
+        </param>
+        <param>
+          <type>WPARAM</type>
+          <declname>wparam</declname>
+        </param>
+        <param>
+          <type>LPARAM</type>
+          <declname>lparam</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L01/Dx11System.cpp" line="177" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L01/Dx11System.cpp" bodystart="177" bodyend="193"/>
+        <references refid="class_dx11_system_1ae620d1794586709dfd2acde01103c6aa" compoundref="_dx11_system_8cpp" startline="18" endline="34">Dx11System::MessageHandler</references>
+        <referencedby refid="class_dx11_system_1a21e0398697569ee19e81757305234c63" compoundref="_dx11_system_8cpp" startline="115" endline="160">Dx11System::InitializeDxWindow</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pch_8h" kindref="compound">pch.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_dx11_system_8h" kindref="compound">Dx11System.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="_dx11_system_8cpp_1aeb15465e1940f240850ab76446b63afc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">wchar_t</highlight><highlight class="normal"><sp/><ref refid="_dx11_system_8cpp_1aeb15465e1940f240850ab76446b63afc" kindref="member">szWindowClass</ref>[]<sp/>=<sp/>L</highlight><highlight class="stringliteral">&quot;DirectX12WindowClass&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="_dx11_system_8cpp_1ac898127dc7a12ebe36128e9cea6940f3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_dx11_system" kindref="compound">Dx11System</ref>*<sp/><ref refid="_dx11_system_8cpp_1ac898127dc7a12ebe36128e9cea6940f3" kindref="member">DxSystemHandle</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="class_dx11_system_1a952bff8ed6342fc0157f55875cdbac1d" refkind="member"><highlight class="normal"><ref refid="class_dx11_system_1a952bff8ed6342fc0157f55875cdbac1d" kindref="member">Dx11System::Dx11System</ref>(HINSTANCE<sp/>hInstance,<sp/>LPCWSTR<sp/>lpCmdLine)</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>m_hInstance(hInstance),<sp/>m_strCmdLine(lpCmdLine)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>DxSystemHandle<sp/>=<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="class_dx11_system_1af57367b43233a21449d340f63e075be1" refkind="member"><highlight class="normal"><ref refid="class_dx11_system_1af57367b43233a21449d340f63e075be1" kindref="member">Dx11System::~Dx11System</ref>()</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="class_dx11_system_1ae620d1794586709dfd2acde01103c6aa" refkind="member"><highlight class="normal">LRESULT<sp/><ref refid="class_dx11_system_1ae620d1794586709dfd2acde01103c6aa" kindref="member">Dx11System::MessageHandler</ref>(HWND<sp/>hwnd,<sp/>UINT<sp/>umsg,<sp/>WPARAM<sp/>wparam,<sp/>LPARAM<sp/>lparam)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(umsg)<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>WM_KEYDOWN:</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_dx11_system_1a019c72e07a2f1ef042fb750465d31d1a" kindref="member">m_Input</ref>.<ref refid="class_dx11_input_1a8f52f9501bd5c15b60c1a1d25965bc83" kindref="member">KeyDown</ref>((</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)wparam);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>WM_KEYUP:</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_dx11_system_1a019c72e07a2f1ef042fb750465d31d1a" kindref="member">m_Input</ref>.<ref refid="class_dx11_input_1a63c742a7fca71e4d11f4f7f0ebaff583" kindref="member">KeyUp</ref>((</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)wparam);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>DefWindowProcW(hwnd,<sp/>umsg,<sp/>wparam,<sp/>lparam);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="class_dx11_system_1a9c80b246f8a0c28dd440fbf52a3fb829" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_dx11_system_1a9c80b246f8a0c28dd440fbf52a3fb829" kindref="member">Dx11System::Initialize</ref>(LPCWSTR<sp/><ref refid="_dx11_l01_8cpp_1aec21849299120934e9bda3da28b051f1" kindref="member">szTitle</ref>)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="class_dx11_system_1a21e0398697569ee19e81757305234c63" kindref="member">InitializeDxWindow</ref>(szTitle))<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OutputDebugStringW(L</highlight><highlight class="stringliteral">&quot;DirectX<sp/>Window<sp/>Initialize<sp/>fail.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="class_dx11_system_1a019c72e07a2f1ef042fb750465d31d1a" kindref="member">m_Input</ref>.<ref refid="class_dx11_input_1a506357214613ef0bd788696ebb9e401e" kindref="member">Initialize</ref>(<ref refid="class_dx11_system_1aa5ae125443745e9504cf4a61290f2b94" kindref="member">m_hWnd</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OutputDebugStringW(L</highlight><highlight class="stringliteral">&quot;DirectX<sp/>Input<sp/>System<sp/>Initialize<sp/>fail.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="class_dx11_system_1a14e553a4eeb94b3a47e02f49f0c4543f" kindref="member">m_Graphics</ref>.<ref refid="class_dx11_graphics_1a9e507922d353c6a815c804e672c9b656" kindref="member">Initialize</ref>(<ref refid="class_dx11_system_1aa5ae125443745e9504cf4a61290f2b94" kindref="member">m_hWnd</ref>,<sp/><ref refid="class_dx11_system_1a825fa2d8bb803a32681240a36c143dd1" kindref="member">m_szWindow</ref>.cx,<sp/><ref refid="class_dx11_system_1a825fa2d8bb803a32681240a36c143dd1" kindref="member">m_szWindow</ref>.cy,<sp/><ref refid="class_dx11_system_1a5bcac93f737d79230761d06534dd87e3" kindref="member">m_bFullScreen</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OutputDebugStringW(L</highlight><highlight class="stringliteral">&quot;DirectX<sp/>Graphics<sp/>Initialize<sp/>fail.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="class_dx11_system_1a269968e3a450029fc5de46906ca1acbe" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_dx11_system_1a269968e3a450029fc5de46906ca1acbe" kindref="member">Dx11System::Run</ref>()</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>MSG<sp/>msg;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>ZeroMemory(&amp;msg,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(MSG));</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_dx11_system_1a0972a77582d54aec49fa9f9b6d21aff2" kindref="member">m_bRuning</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="class_dx11_system_1a0972a77582d54aec49fa9f9b6d21aff2" kindref="member">m_bRuning</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(PeekMessage(&amp;msg,<sp/>NULL,<sp/>0,<sp/>0,<sp/>PM_REMOVE))<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TranslateMessage(&amp;msg);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DispatchMessage(&amp;msg);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//OutputDebugStringW(L&quot;Message<sp/>loop.\n&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(WM_QUIT<sp/>==<sp/>msg.message)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_dx11_system_1a0972a77582d54aec49fa9f9b6d21aff2" kindref="member">m_bRuning</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="class_dx11_system_1a88d549d0769244c857dcfcad739e5eae" kindref="member">UpdateFrame</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_dx11_system_1a0972a77582d54aec49fa9f9b6d21aff2" kindref="member">m_bRuning</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="class_dx11_system_1a600d8df8fad77747cad2cc5bf0845827" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_dx11_system_1a600d8df8fad77747cad2cc5bf0845827" kindref="member">Dx11System::Destroy</ref>()</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_dx11_system_1a14e553a4eeb94b3a47e02f49f0c4543f" kindref="member">m_Graphics</ref>.<ref refid="class_dx11_graphics_1a40cb1058947853abc42e756e4f68ddb1" kindref="member">Destroy</ref>();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_dx11_system_1a019c72e07a2f1ef042fb750465d31d1a" kindref="member">m_Input</ref>.<ref refid="class_dx11_input_1abdc13a9885b04fae023fdc3eff5b8eee" kindref="member">Destroy</ref>();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_dx11_system_1a318b79da60a4ef633a5f3cbc909cbfd5" kindref="member">DestroyDxWindow</ref>();</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="class_dx11_system_1a88d549d0769244c857dcfcad739e5eae" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_dx11_system_1a88d549d0769244c857dcfcad739e5eae" kindref="member">Dx11System::UpdateFrame</ref>()</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_dx11_system_1a019c72e07a2f1ef042fb750465d31d1a" kindref="member">m_Input</ref>.<ref refid="class_dx11_input_1a40e4ccd8a0a624b4e3fcfd5d9890f91f" kindref="member">IsKeyDown</ref>(VK_ESCAPE))<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="class_dx11_system_1a14e553a4eeb94b3a47e02f49f0c4543f" kindref="member">m_Graphics</ref>.<ref refid="class_dx11_graphics_1ad0ace17622f926baf7b6f374ee5050b0" kindref="member">UpdateFrame</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="_dx11_system_8cpp_1ae01fd09a45688fad837a6dbd69e400b2" refkind="member"><highlight class="normal">DWORD<sp/><ref refid="_dx11_system_8cpp_1ae01fd09a45688fad837a6dbd69e400b2" kindref="member">WindowStyleEx</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>fullscreen)<sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fullscreen)</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>WS_EX_APPWINDOW<sp/>|<sp/>WS_EX_NOREDIRECTIONBITMAP;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>WS_EX_APPWINDOW</highlight><highlight class="comment">/*<sp/>|<sp/>WS_EX_NOREDIRECTIONBITMAP*/</highlight><highlight class="normal"><sp/>|<sp/>WS_EX_OVERLAPPEDWINDOW;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108" refid="_dx11_system_8cpp_1a7afc04d0d43f5503cf702cc7eb61ec4d" refkind="member"><highlight class="normal">DWORD<sp/><ref refid="_dx11_system_8cpp_1a7afc04d0d43f5503cf702cc7eb61ec4d" kindref="member">WindowStyle</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>fullscreen)<sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fullscreen)</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>WS_CLIPCHILDREN<sp/>|<sp/>WS_CLIPSIBLINGS<sp/>|<sp/>WS_POPUPWINDOW<sp/>|<sp/>WS_VISIBLE;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>WS_CLIPCHILDREN<sp/>|<sp/>WS_CLIPSIBLINGS<sp/>|<sp/>WS_POPUPWINDOW<sp/>|<sp/>WS_VISIBLE<sp/>|<sp/>WS_OVERLAPPEDWINDOW;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="class_dx11_system_1a21e0398697569ee19e81757305234c63" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_dx11_system_1a21e0398697569ee19e81757305234c63" kindref="member">Dx11System::InitializeDxWindow</ref>(LPCWSTR<sp/><ref refid="_dx11_l01_8cpp_1aec21849299120934e9bda3da28b051f1" kindref="member">szTitle</ref>)</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>WNDCLASSEXW<sp/>wc;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>ZeroMemory(&amp;wc,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(WNDCLASSEX));</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>wc.cbSize<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(WNDCLASSEXW);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>wc.style<sp/>=<sp/>CS_HREDRAW<sp/>|<sp/>CS_VREDRAW<sp/>|<sp/>CS_OWNDC;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>wc.lpfnWndProc<sp/>=<sp/><ref refid="_dx11_system_8cpp_1a3f4c854bca0fe97a24dd96e03bd74d39" kindref="member">DxWndProc</ref>;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>wc.hInstance<sp/>=<sp/><ref refid="class_dx11_system_1a9b9e4b76fc93ad9791e9affba12ddbcb" kindref="member">m_hInstance</ref>;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>wc.hIcon<sp/>=<sp/>(HICON)LoadImageW(NULL,<sp/>L</highlight><highlight class="stringliteral">&quot;Dx11L.ico&quot;</highlight><highlight class="normal">,<sp/>IMAGE_ICON,<sp/>0,<sp/>0,<sp/>LR_LOADFROMFILE<sp/>|<sp/>LR_DEFAULTSIZE<sp/>|<sp/>LR_SHARED);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>wc.hIconSm<sp/>=<sp/>(HICON)LoadImageW(NULL,<sp/>L</highlight><highlight class="stringliteral">&quot;smal.ico&quot;</highlight><highlight class="normal">,<sp/>IMAGE_ICON,<sp/>0,<sp/>0,<sp/>LR_LOADFROMFILE<sp/>|<sp/>LR_DEFAULTSIZE<sp/>|<sp/>LR_SHARED);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>wc.hCursor<sp/>=<sp/>LoadCursor(NULL,<sp/>IDC_ARROW);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>wc.hbrBackground<sp/>=<sp/>(HBRUSH)GetStockObject(LTGRAY_BRUSH);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>wc.lpszClassName<sp/>=<sp/><ref refid="_dx11_system_8cpp_1aeb15465e1940f240850ab76446b63afc" kindref="member">szWindowClass</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>主窗口类名</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>ATOM<sp/>atom<sp/>=<sp/>RegisterClassExW(&amp;wc);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!atom)<sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_dx11_system_1a5bcac93f737d79230761d06534dd87e3" kindref="member">m_bFullScreen</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_dx11_system_1a825fa2d8bb803a32681240a36c143dd1" kindref="member">m_szWindow</ref>.cx<sp/>=<sp/>GetSystemMetrics(SM_CXSCREEN);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_dx11_system_1a825fa2d8bb803a32681240a36c143dd1" kindref="member">m_szWindow</ref>.cy<sp/>=<sp/>GetSystemMetrics(SM_CYSCREEN);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEVMODEW<sp/>dmScreen;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZeroMemory(&amp;dmScreen,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(DEVMODEW));</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dmScreen.dmSize<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(DEVMODEW);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dmScreen.dmPelsWidth<sp/>=<sp/><ref refid="class_dx11_system_1a825fa2d8bb803a32681240a36c143dd1" kindref="member">m_szWindow</ref>.cx;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dmScreen.dmPelsHeight<sp/>=<sp/><ref refid="class_dx11_system_1a825fa2d8bb803a32681240a36c143dd1" kindref="member">m_szWindow</ref>.cy;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dmScreen.dmBitsPerPel<sp/>=<sp/>32;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dmScreen.dmFields<sp/>=<sp/>DM_BITSPERPEL<sp/>|<sp/>DM_PELSWIDTH<sp/>|<sp/>DM_PELSHEIGHT;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ChangeDisplaySettingsExW(NULL,<sp/>&amp;dmScreen,<sp/>NULL,<sp/>CDS_FULLSCREEN,<sp/>NULL);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_dx11_system_1aa5ae125443745e9504cf4a61290f2b94" kindref="member">m_hWnd</ref><sp/>=<sp/>CreateWindowExW(<ref refid="_dx11_system_8cpp_1ae01fd09a45688fad837a6dbd69e400b2" kindref="member">WindowStyleEx</ref>(<ref refid="class_dx11_system_1a5bcac93f737d79230761d06534dd87e3" kindref="member">m_bFullScreen</ref>),<sp/><ref refid="_dx11_system_8cpp_1aeb15465e1940f240850ab76446b63afc" kindref="member">szWindowClass</ref>,<sp/>szTitle,</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_dx11_system_8cpp_1a7afc04d0d43f5503cf702cc7eb61ec4d" kindref="member">WindowStyle</ref>(<ref refid="class_dx11_system_1a5bcac93f737d79230761d06534dd87e3" kindref="member">m_bFullScreen</ref>),<sp/>CW_USEDEFAULT,<sp/>CW_USEDEFAULT,<sp/><ref refid="class_dx11_system_1a825fa2d8bb803a32681240a36c143dd1" kindref="member">m_szWindow</ref>.cx,<sp/><ref refid="class_dx11_system_1a825fa2d8bb803a32681240a36c143dd1" kindref="member">m_szWindow</ref>.cy,</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL,<sp/>NULL,<sp/><ref refid="class_dx11_system_1a9b9e4b76fc93ad9791e9affba12ddbcb" kindref="member">m_hInstance</ref>,<sp/>NULL);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="class_dx11_system_1aa5ae125443745e9504cf4a61290f2b94" kindref="member">m_hWnd</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>ShowWindow(<ref refid="class_dx11_system_1aa5ae125443745e9504cf4a61290f2b94" kindref="member">m_hWnd</ref>,<sp/>SW_SHOW);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>SetForegroundWindow(<ref refid="class_dx11_system_1aa5ae125443745e9504cf4a61290f2b94" kindref="member">m_hWnd</ref>);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>SetFocus(<ref refid="class_dx11_system_1aa5ae125443745e9504cf4a61290f2b94" kindref="member">m_hWnd</ref>);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>ShowCursor(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162" refid="class_dx11_system_1a318b79da60a4ef633a5f3cbc909cbfd5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_dx11_system_1a318b79da60a4ef633a5f3cbc909cbfd5" kindref="member">Dx11System::DestroyDxWindow</ref>()</highlight></codeline>
+<codeline lineno="163"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>ShowCursor(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_dx11_system_1a5bcac93f737d79230761d06534dd87e3" kindref="member">m_bFullScreen</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ChangeDisplaySettingsW(NULL,<sp/>0);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>DestroyWindow(<ref refid="class_dx11_system_1aa5ae125443745e9504cf4a61290f2b94" kindref="member">m_hWnd</ref>);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_dx11_system_1aa5ae125443745e9504cf4a61290f2b94" kindref="member">m_hWnd</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>UnregisterClass(<ref refid="_dx11_system_8cpp_1aeb15465e1940f240850ab76446b63afc" kindref="member">szWindowClass</ref>,<sp/><ref refid="class_dx11_system_1a9b9e4b76fc93ad9791e9affba12ddbcb" kindref="member">m_hInstance</ref>);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_dx11_system_1a9b9e4b76fc93ad9791e9affba12ddbcb" kindref="member">m_hInstance</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177" refid="_dx11_system_8h_1a3f4c854bca0fe97a24dd96e03bd74d39" refkind="member"><highlight class="normal">LRESULT<sp/>CALLBACK<sp/><ref refid="_dx11_system_8cpp_1a3f4c854bca0fe97a24dd96e03bd74d39" kindref="member">DxWndProc</ref>(HWND<sp/>hwnd,<sp/>UINT<sp/>umsg,<sp/>WPARAM<sp/>wparam,<sp/>LPARAM<sp/>lparam)</highlight></codeline>
+<codeline lineno="178"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(umsg)<sp/>{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>WM_DESTROY:</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PostQuitMessage(0);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>WM_CLOSE:</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PostQuitMessage(0);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>DxSystemHandle-&gt;<ref refid="class_dx11_system_1ae620d1794586709dfd2acde01103c6aa" kindref="member">MessageHandler</ref>(hwnd,<sp/>umsg,<sp/>wparam,<sp/>lparam);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Documents/VS2017/repos/Dx11/Dx11L01/Dx11System.cpp"/>
+  </compounddef>
+</doxygen>

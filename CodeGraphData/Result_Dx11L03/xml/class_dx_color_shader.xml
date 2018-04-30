@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_dx_color_shader" kind="class" prot="public">
+    <compoundname>DxColorShader</compoundname>
+    <includes refid="_dx_color_shader_8h" local="no">DxColorShader.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_dx_color_shader_1a24e9f6a58ee6c4e08081806f3c2b6d46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DxColorShader::DxColorShader</definition>
+        <argsstring>()</argsstring>
+        <name>DxColorShader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/DxColorShader.h" line="5" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L02/DxColorShader.cpp" bodystart="5" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dx_color_shader_1ae5690ba93f2d4f17d11c1deb77f27205" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DxColorShader::~DxColorShader</definition>
+        <argsstring>()</argsstring>
+        <name>~DxColorShader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/DxColorShader.h" line="6" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L02/DxColorShader.cpp" bodystart="10" bodyend="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/DxColorShader.h" line="3" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L02/DxColorShader.h" bodystart="2" bodyend="7"/>
+    <listofallmembers>
+      <member refid="class_dx_color_shader_1a24e9f6a58ee6c4e08081806f3c2b6d46" prot="public" virt="non-virtual"><scope>DxColorShader</scope><name>DxColorShader</name></member>
+      <member refid="class_dx_color_shader_1ae5690ba93f2d4f17d11c1deb77f27205" prot="public" virt="non-virtual"><scope>DxColorShader</scope><name>~DxColorShader</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

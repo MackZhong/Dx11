@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Dx11System">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <AssociationLine Name="m_Input" Type="Dx11Input" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.25" Y="1.625" />
+        <Point X="2.625" Y="1.625" />
+        <Point X="2.625" Y="4.438" />
+        <Point X="3.5" Y="4.438" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACACABACAAgQAAAAAAACAAAQBEAQAQEAAAAQAAAAY=</HashCode>
+      <FileName>Dx11System.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_Graphics" />
+      <Field Name="m_Input" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Dx11Input">
+    <Position X="3.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAgQAAIAgAAgAAAABAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Dx11Input.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dx11Graphics">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gIAAAAEBAAAAAQAAAAAAAABAAAhAAAAIABAAAAAAAAA=</HashCode>
+      <FileName>Dx11Graphics.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_DxEngine" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="D3D11Engine">
+    <Position X="6.25" Y="0.5" Width="2" />
+    <NestedTypes>
+      <Struct Name="D3D11Engine::Vertex" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>D3D11Engine.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAEGhCwRICAEA1BBQGAQAIAAQCDAEgCABBAASEAQEBA=</HashCode>
+      <FileName>D3D11Engine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

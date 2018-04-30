@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_dx11_input_8h" kind="file">
+    <compoundname>Dx11Input.h</compoundname>
+    <includedby refid="_dx11_input_8cpp" local="yes">D:/Documents/VS2017/repos/Dx11/Dx11L01/Dx11Input.cpp</includedby>
+    <includedby refid="_dx11_system_8h" local="yes">D:/Documents/VS2017/repos/Dx11/Dx11L01/Dx11System.h</includedby>
+    <invincdepgraph>
+      <node id="93">
+        <label>D:/Documents/VS2017/repos/Dx11/Dx11L01/Dx11System.cpp</label>
+        <link refid="_dx11_system_8cpp"/>
+      </node>
+      <node id="89">
+        <label>D:/Documents/VS2017/repos/Dx11/Dx11L01/Dx11Input.h</label>
+        <link refid="Dx11Input.h"/>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+      </node>
+      <node id="91">
+        <label>D:/Documents/VS2017/repos/Dx11/Dx11L01/Dx11System.h</label>
+        <link refid="_dx11_system_8h"/>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+      </node>
+      <node id="90">
+        <label>D:/Documents/VS2017/repos/Dx11/Dx11L01/Dx11Input.cpp</label>
+        <link refid="_dx11_input_8cpp"/>
+      </node>
+      <node id="92">
+        <label>D:/Documents/VS2017/repos/Dx11/Dx11L01/Dx11L01.cpp</label>
+        <link refid="_dx11_l01_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_dx11_input" prot="public">Dx11Input</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight></codeline>
+<codeline lineno="2" refid="class_dx11_input" refkind="compound"><highlight class="preprocessor"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_dx11_input" kindref="compound">Dx11Input</ref></highlight></codeline>
+<codeline lineno="3"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="5" refid="class_dx11_input_1a2dfc01544b95f879c5afc0b3ff5b29d7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_dx11_input_1a2dfc01544b95f879c5afc0b3ff5b29d7" kindref="member">m_bKeyDown</ref>[256];</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_dx11_input_1af2d3ebd7ea83cf6f9af91eaacda59784" kindref="member">Dx11Input</ref>();</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_dx11_input_1a054ac95cf942de759f75cc32be759853" kindref="member">~Dx11Input</ref>();</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_dx11_input_1a506357214613ef0bd788696ebb9e401e" kindref="member">Initialize</ref>(HWND<sp/>m_hWnd);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_dx11_input_1abdc13a9885b04fae023fdc3eff5b8eee" kindref="member">Destroy</ref>();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_dx11_input_1a40e4ccd8a0a624b4e3fcfd5d9890f91f" kindref="member">IsKeyDown</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>keyCode);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_dx11_input_1a8f52f9501bd5c15b60c1a1d25965bc83" kindref="member">KeyDown</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>keyCode);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_dx11_input_1a63c742a7fca71e4d11f4f7f0ebaff583" kindref="member">KeyUp</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>keyCode);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="D:/Documents/VS2017/repos/Dx11/Dx11L01/Dx11Input.h"/>
+  </compounddef>
+</doxygen>

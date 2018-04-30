@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="pch_8cpp" kind="file">
+    <compoundname>pch.cpp</compoundname>
+    <includes refid="pch_8h" local="yes">pch.h</includes>
+    <incdepgraph>
+      <node id="216">
+        <label>D:/Documents/VS2017/repos/Dx11/Dx11L02/pch.cpp</label>
+        <link refid="pch.cpp"/>
+        <childnode refid="217" relation="include">
+        </childnode>
+      </node>
+      <node id="220">
+        <label>windows.h</label>
+      </node>
+      <node id="221">
+        <label>stdlib.h</label>
+      </node>
+      <node id="219">
+        <label>SDKDDKVer.h</label>
+      </node>
+      <node id="233">
+        <label>DX11Helper.h</label>
+        <link refid="_d_x11_helper_8h"/>
+      </node>
+      <node id="231">
+        <label>wrl.h</label>
+      </node>
+      <node id="223">
+        <label>string</label>
+      </node>
+      <node id="227">
+        <label>D3DCompiler.h</label>
+      </node>
+      <node id="225">
+        <label>exception</label>
+      </node>
+      <node id="226">
+        <label>D3d11_4.h</label>
+      </node>
+      <node id="230">
+        <label>dxgi1_4.h</label>
+      </node>
+      <node id="228">
+        <label>DirectXMath.h</label>
+      </node>
+      <node id="218">
+        <label>targetver.h</label>
+        <link refid="targetver_8h"/>
+        <childnode refid="219" relation="include">
+        </childnode>
+      </node>
+      <node id="224">
+        <label>iostream</label>
+      </node>
+      <node id="229">
+        <label>DirectXColors.h</label>
+      </node>
+      <node id="217">
+        <label>pch.h</label>
+        <link refid="pch_8h"/>
+        <childnode refid="218" relation="include">
+        </childnode>
+        <childnode refid="220" relation="include">
+        </childnode>
+        <childnode refid="221" relation="include">
+        </childnode>
+        <childnode refid="222" relation="include">
+        </childnode>
+        <childnode refid="223" relation="include">
+        </childnode>
+        <childnode refid="224" relation="include">
+        </childnode>
+        <childnode refid="225" relation="include">
+        </childnode>
+        <childnode refid="226" relation="include">
+        </childnode>
+        <childnode refid="227" relation="include">
+        </childnode>
+        <childnode refid="228" relation="include">
+        </childnode>
+        <childnode refid="229" relation="include">
+        </childnode>
+        <childnode refid="230" relation="include">
+        </childnode>
+        <childnode refid="231" relation="include">
+        </childnode>
+        <childnode refid="232" relation="include">
+        </childnode>
+        <childnode refid="233" relation="include">
+        </childnode>
+      </node>
+      <node id="232">
+        <label>shellapi.h</label>
+      </node>
+      <node id="222">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>stdafx.cpp<sp/>:<sp/>只包括标准包含文件的源文件</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Dx11L01.pch<sp/>将作为预编译标头</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>stdafx.obj<sp/>将包含预编译类型信息</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pch_8h" kindref="compound">pch.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>在<sp/>STDAFX.H<sp/>中引用任何所需的附加头文件，</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>而不是在此文件中引用</highlight></codeline>
+    </programlisting>
+    <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/pch.cpp"/>
+  </compounddef>
+</doxygen>

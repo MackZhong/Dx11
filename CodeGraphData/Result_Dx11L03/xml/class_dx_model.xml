@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_dx_model" kind="class" prot="public">
+    <compoundname>DxModel</compoundname>
+    <includes refid="_dx_model_8h" local="no">DxModel.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_dx_model_1a93bb3207b7ad4ceea24ef32666cd3f9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DxModel::DxModel</definition>
+        <argsstring>()</argsstring>
+        <name>DxModel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/DxModel.h" line="5" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L02/DxModel.cpp" bodystart="5" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dx_model_1a3c897c8d7395016a256492e84f9a6e4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DxModel::~DxModel</definition>
+        <argsstring>()</argsstring>
+        <name>~DxModel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/DxModel.h" line="6" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L02/DxModel.cpp" bodystart="10" bodyend="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/DxModel.h" line="3" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L02/DxModel.h" bodystart="2" bodyend="7"/>
+    <listofallmembers>
+      <member refid="class_dx_model_1a93bb3207b7ad4ceea24ef32666cd3f9a" prot="public" virt="non-virtual"><scope>DxModel</scope><name>DxModel</name></member>
+      <member refid="class_dx_model_1a3c897c8d7395016a256492e84f9a6e4b" prot="public" virt="non-virtual"><scope>DxModel</scope><name>~DxModel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

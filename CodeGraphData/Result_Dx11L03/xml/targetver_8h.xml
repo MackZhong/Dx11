@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="targetver_8h" kind="file">
+    <compoundname>targetver.h</compoundname>
+    <includes local="no">SDKDDKVer.h</includes>
+    <includedby refid="pch_8h" local="yes">D:/Documents/VS2017/repos/Dx11/Dx11L02/pch.h</includedby>
+    <incdepgraph>
+      <node id="263">
+        <label>SDKDDKVer.h</label>
+      </node>
+      <node id="262">
+        <label>D:/Documents/VS2017/repos/Dx11/Dx11L02/targetver.h</label>
+        <link refid="targetver.h"/>
+        <childnode refid="263" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="274">
+        <label>D:/Documents/VS2017/repos/Dx11/Dx11L02/pch.cpp</label>
+        <link refid="pch_8cpp"/>
+      </node>
+      <node id="273">
+        <label>D:/Documents/VS2017/repos/Dx11/Dx11L02/DxModel.cpp</label>
+        <link refid="_dx_model_8cpp"/>
+      </node>
+      <node id="272">
+        <label>D:/Documents/VS2017/repos/Dx11/Dx11L02/DxColorShader.cpp</label>
+        <link refid="_dx_color_shader_8cpp"/>
+      </node>
+      <node id="266">
+        <label>D:/Documents/VS2017/repos/Dx11/Dx11L02/D3D11Engine.cpp</label>
+        <link refid="_d3_d11_engine_8cpp"/>
+      </node>
+      <node id="271">
+        <label>D:/Documents/VS2017/repos/Dx11/Dx11L02/DxCamera.cpp</label>
+        <link refid="_dx_camera_8cpp"/>
+      </node>
+      <node id="269">
+        <label>D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11L02.cpp</label>
+        <link refid="_dx11_l02_8cpp"/>
+      </node>
+      <node id="264">
+        <label>D:/Documents/VS2017/repos/Dx11/Dx11L02/targetver.h</label>
+        <link refid="targetver.h"/>
+        <childnode refid="265" relation="include">
+        </childnode>
+      </node>
+      <node id="270">
+        <label>D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.cpp</label>
+        <link refid="_dx11_system_8cpp"/>
+      </node>
+      <node id="267">
+        <label>D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11Graphics.cpp</label>
+        <link refid="_dx11_graphics_8cpp"/>
+      </node>
+      <node id="265">
+        <label>D:/Documents/VS2017/repos/Dx11/Dx11L02/pch.h</label>
+        <link refid="pch_8h"/>
+        <childnode refid="266" relation="include">
+        </childnode>
+        <childnode refid="267" relation="include">
+        </childnode>
+        <childnode refid="268" relation="include">
+        </childnode>
+        <childnode refid="269" relation="include">
+        </childnode>
+        <childnode refid="270" relation="include">
+        </childnode>
+        <childnode refid="271" relation="include">
+        </childnode>
+        <childnode refid="272" relation="include">
+        </childnode>
+        <childnode refid="273" relation="include">
+        </childnode>
+        <childnode refid="274" relation="include">
+        </childnode>
+      </node>
+      <node id="268">
+        <label>D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11Input.cpp</label>
+        <link refid="_dx11_input_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>包括<sp/>SDKDDKVer.h<sp/>将定义可用的最高版本的<sp/>Windows<sp/>平台。</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>如果要为以前的<sp/>Windows<sp/>平台生成应用程序，请包括<sp/>WinSDKVer.h，并将</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>将<sp/>_WIN32_WINNT<sp/>宏设置为要支持的平台，然后再包括<sp/>SDKDDKVer.h。</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SDKDDKVer.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/targetver.h"/>
+  </compounddef>
+</doxygen>

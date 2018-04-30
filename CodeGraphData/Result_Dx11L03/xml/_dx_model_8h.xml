@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_dx_model_8h" kind="file">
+    <compoundname>DxModel.h</compoundname>
+    <includedby refid="_dx_model_8cpp" local="yes">D:/Documents/VS2017/repos/Dx11/Dx11L02/DxModel.cpp</includedby>
+    <invincdepgraph>
+      <node id="215">
+        <label>D:/Documents/VS2017/repos/Dx11/Dx11L02/DxModel.cpp</label>
+        <link refid="_dx_model_8cpp"/>
+      </node>
+      <node id="214">
+        <label>D:/Documents/VS2017/repos/Dx11/Dx11L02/DxModel.h</label>
+        <link refid="DxModel.h"/>
+        <childnode refid="215" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_dx_model" prot="public">DxModel</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight></codeline>
+<codeline lineno="2" refid="class_dx_model" refkind="compound"><highlight class="preprocessor"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_dx_model" kindref="compound">DxModel</ref></highlight></codeline>
+<codeline lineno="3"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_dx_model_1a93bb3207b7ad4ceea24ef32666cd3f9a" kindref="member">DxModel</ref>();</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_dx_model_1a3c897c8d7395016a256492e84f9a6e4b" kindref="member">~DxModel</ref>();</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/DxModel.h"/>
+  </compounddef>
+</doxygen>

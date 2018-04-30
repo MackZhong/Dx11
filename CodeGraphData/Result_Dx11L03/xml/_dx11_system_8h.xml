@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_dx11_system_8h" kind="file">
+    <compoundname>Dx11System.h</compoundname>
+    <includes refid="_dx11_input_8h" local="yes">Dx11Input.h</includes>
+    <includes refid="_dx11_graphics_8h" local="yes">Dx11Graphics.h</includes>
+    <includedby refid="_dx11_l02_8cpp" local="yes">D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11L02.cpp</includedby>
+    <includedby refid="_dx11_system_8cpp" local="yes">D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.cpp</includedby>
+    <incdepgraph>
+      <node id="143">
+        <label>D3D11Engine.h</label>
+        <link refid="_d3_d11_engine_8h"/>
+      </node>
+      <node id="141">
+        <label>Dx11Input.h</label>
+        <link refid="_dx11_input_8h"/>
+      </node>
+      <node id="140">
+        <label>D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.h</label>
+        <link refid="Dx11System.h"/>
+        <childnode refid="141" relation="include">
+        </childnode>
+        <childnode refid="142" relation="include">
+        </childnode>
+      </node>
+      <node id="142">
+        <label>Dx11Graphics.h</label>
+        <link refid="_dx11_graphics_8h"/>
+        <childnode refid="143" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="145">
+        <label>D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11L02.cpp</label>
+        <link refid="_dx11_l02_8cpp"/>
+      </node>
+      <node id="146">
+        <label>D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.cpp</label>
+        <link refid="_dx11_system_8cpp"/>
+      </node>
+      <node id="144">
+        <label>D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.h</label>
+        <link refid="Dx11System.h"/>
+        <childnode refid="145" relation="include">
+        </childnode>
+        <childnode refid="146" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_dx11_system" prot="public">Dx11System</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_dx11_system_8h_1a3f4c854bca0fe97a24dd96e03bd74d39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LRESULT CALLBACK</type>
+        <definition>LRESULT CALLBACK DxWndProc</definition>
+        <argsstring>(HWND hwnd, UINT umsg, WPARAM wparam, LPARAM lparam)</argsstring>
+        <name>DxWndProc</name>
+        <param>
+          <type>HWND</type>
+          <declname>hwnd</declname>
+        </param>
+        <param>
+          <type>UINT</type>
+          <declname>umsg</declname>
+        </param>
+        <param>
+          <type>WPARAM</type>
+          <declname>wparam</declname>
+        </param>
+        <param>
+          <type>LPARAM</type>
+          <declname>lparam</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.h" line="33" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.cpp" bodystart="173" bodyend="183"/>
+        <references refid="class_dx11_system_1ae620d1794586709dfd2acde01103c6aa" compoundref="_dx11_system_8cpp" startline="18" endline="30">Dx11System::MessageHandler</references>
+        <referencedby refid="class_dx11_system_1a21e0398697569ee19e81757305234c63" compoundref="_dx11_system_8cpp" startline="111" endline="156">Dx11System::InitializeDxWindow</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_dx11_input_8h" kindref="compound">Dx11Input.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_dx11_graphics_8h" kindref="compound">Dx11Graphics.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="class_dx11_system" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_dx11_system" kindref="compound">Dx11System</ref></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="8" refid="class_dx11_system_1a9b9e4b76fc93ad9791e9affba12ddbcb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>HINSTANCE<sp/><ref refid="class_dx11_system_1a9b9e4b76fc93ad9791e9affba12ddbcb" kindref="member">m_hInstance</ref>;</highlight></codeline>
+<codeline lineno="9" refid="class_dx11_system_1a71d1d29817975a425a77accadf8d776d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::wstring<sp/><ref refid="class_dx11_system_1a71d1d29817975a425a77accadf8d776d" kindref="member">m_strCmdLine</ref>;</highlight></codeline>
+<codeline lineno="10" refid="class_dx11_system_1aa5ae125443745e9504cf4a61290f2b94" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>HWND<sp/><sp/><sp/><sp/><ref refid="class_dx11_system_1aa5ae125443745e9504cf4a61290f2b94" kindref="member">m_hWnd</ref>;</highlight></codeline>
+<codeline lineno="11" refid="class_dx11_system_1a019c72e07a2f1ef042fb750465d31d1a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_dx11_input" kindref="compound">Dx11Input</ref><sp/><ref refid="class_dx11_system_1a019c72e07a2f1ef042fb750465d31d1a" kindref="member">m_Input</ref>;</highlight></codeline>
+<codeline lineno="12" refid="class_dx11_system_1a14e553a4eeb94b3a47e02f49f0c4543f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_dx11_graphics" kindref="compound">Dx11Graphics</ref><sp/><ref refid="class_dx11_system_1a14e553a4eeb94b3a47e02f49f0c4543f" kindref="member">m_Graphics</ref>;</highlight></codeline>
+<codeline lineno="13" refid="class_dx11_system_1a825fa2d8bb803a32681240a36c143dd1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>SIZE<sp/><ref refid="class_dx11_system_1a825fa2d8bb803a32681240a36c143dd1" kindref="member">m_szWindow</ref>{<sp/>800,<sp/>600<sp/>};</highlight></codeline>
+<codeline lineno="14" refid="class_dx11_system_1a5bcac93f737d79230761d06534dd87e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_dx11_system_1a5bcac93f737d79230761d06534dd87e3" kindref="member">m_bFullScreen</ref>{<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="15" refid="class_dx11_system_1a0972a77582d54aec49fa9f9b6d21aff2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_dx11_system_1a0972a77582d54aec49fa9f9b6d21aff2" kindref="member">m_bRuning</ref>{<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_dx11_system_1a952bff8ed6342fc0157f55875cdbac1d" kindref="member">Dx11System</ref>(_In_<sp/>HINSTANCE<sp/>hInstance,<sp/>_In_<sp/>LPCWSTR<sp/>lpCmdLine);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_dx11_system_1af57367b43233a21449d340f63e075be1" kindref="member">~Dx11System</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>LRESULT<sp/>CALLBACK<sp/><ref refid="class_dx11_system_1ae620d1794586709dfd2acde01103c6aa" kindref="member">MessageHandler</ref>(HWND<sp/>hwnd,<sp/>UINT<sp/>umsg,<sp/>WPARAM<sp/>wparam,<sp/>LPARAM<sp/>lparam);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_dx11_system_1a9c80b246f8a0c28dd440fbf52a3fb829" kindref="member">Initialize</ref>(LPCWSTR<sp/><ref refid="_dx11_l02_8cpp_1aec21849299120934e9bda3da28b051f1" kindref="member">szTitle</ref>);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_dx11_system_1a269968e3a450029fc5de46906ca1acbe" kindref="member">Run</ref>();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_dx11_system_1a600d8df8fad77747cad2cc5bf0845827" kindref="member">Destroy</ref>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_dx11_system_1a88d549d0769244c857dcfcad739e5eae" kindref="member">UpdateFrame</ref>();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_dx11_system_1a21e0398697569ee19e81757305234c63" kindref="member">InitializeDxWindow</ref>(LPCWSTR<sp/><ref refid="_dx11_l02_8cpp_1aec21849299120934e9bda3da28b051f1" kindref="member">szTitle</ref>);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_dx11_system_1a318b79da60a4ef633a5f3cbc909cbfd5" kindref="member">DestroyDxWindow</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">LRESULT<sp/>CALLBACK<sp/><ref refid="_dx11_system_8h_1a3f4c854bca0fe97a24dd96e03bd74d39" kindref="member">DxWndProc</ref>(HWND<sp/>hwnd,<sp/>UINT<sp/>umsg,<sp/>WPARAM<sp/>wparam,<sp/>LPARAM<sp/>lparam);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.h"/>
+  </compounddef>
+</doxygen>

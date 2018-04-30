@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_d3_d11_engine_8h" kind="file">
+    <compoundname>D3D11Engine.h</compoundname>
+    <includedby refid="_d3_d11_engine_8cpp" local="yes">D:/Documents/VS2017/repos/Dx11/Dx11L02/D3D11Engine.cpp</includedby>
+    <includedby refid="_dx11_graphics_8h" local="yes">D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11Graphics.h</includedby>
+    <invincdepgraph>
+      <node id="21">
+        <label>D:/Documents/VS2017/repos/Dx11/Dx11L02/D3D11Engine.h</label>
+        <link refid="D3D11Engine.h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>D:/Documents/VS2017/repos/Dx11/Dx11L02/D3D11Engine.cpp</label>
+        <link refid="_d3_d11_engine_8cpp"/>
+      </node>
+      <node id="26">
+        <label>D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11L02.cpp</label>
+        <link refid="_dx11_l02_8cpp"/>
+      </node>
+      <node id="27">
+        <label>D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.cpp</label>
+        <link refid="_dx11_system_8cpp"/>
+      </node>
+      <node id="25">
+        <label>D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11System.h</label>
+        <link refid="_dx11_system_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11Graphics.cpp</label>
+        <link refid="_dx11_graphics_8cpp"/>
+      </node>
+      <node id="23">
+        <label>D:/Documents/VS2017/repos/Dx11/Dx11L02/Dx11Graphics.h</label>
+        <link refid="_dx11_graphics_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_d3_d11_engine" prot="public">D3D11Engine</innerclass>
+    <innerclass refid="struct_d3_d11_engine_1_1_vertex" prot="private">D3D11Engine::Vertex</innerclass>
+    <innernamespace refid="namespace_direct_x">DirectX</innernamespace>
+    <innernamespace refid="namespace_microsoft_1_1_w_r_l">Microsoft::WRL</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="comment">//#include<sp/>&lt;d3d12sdklayers.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">DirectX;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">Microsoft::WRL;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>D3DCOMPILE_DEBUG<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="class_d3_d11_engine" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_d3_d11_engine" kindref="compound">D3D11Engine</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="13" refid="struct_d3_d11_engine_1_1_vertex" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_d3_d11_engine_1_1_vertex" kindref="compound">Vertex</ref></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="15" refid="struct_d3_d11_engine_1_1_vertex_1a06fd5d0896685f9c5b331fbc2ed07bb1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>XMFLOAT3<sp/><ref refid="struct_d3_d11_engine_1_1_vertex_1a06fd5d0896685f9c5b331fbc2ed07bb1" kindref="member">position</ref>;</highlight></codeline>
+<codeline lineno="16" refid="struct_d3_d11_engine_1_1_vertex_1ad0379f66565a3fc2ab26439c985a7b48" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>XMFLOAT4<sp/><ref refid="struct_d3_d11_engine_1_1_vertex_1ad0379f66565a3fc2ab26439c985a7b48" kindref="member">color</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//static<sp/>const<sp/>UINT<sp/>FrameCount<sp/>=<sp/>2;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="class_d3_d11_engine_1a7295a658b849f2350e003c8037eb9f75" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::wstring<sp/><ref refid="class_d3_d11_engine_1a7295a658b849f2350e003c8037eb9f75" kindref="member">m_AssetsPath</ref>;</highlight></codeline>
+<codeline lineno="21" refid="class_d3_d11_engine_1a095022848e33472eb3e65706b05d54d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>m_AspectRatio{<sp/>1.0f<sp/>};</highlight></codeline>
+<codeline lineno="22" refid="class_d3_d11_engine_1a0c0ece62da804b4c45f5bf78611afcb0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>m_FOV{<sp/>3.141592654f<sp/>/<sp/>4.0f<sp/>};</highlight></codeline>
+<codeline lineno="23" refid="class_d3_d11_engine_1a40fa9dd4ec30f87882d4053fdce0c91d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>HWND<sp/>m_hWnd{<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="24" refid="class_d3_d11_engine_1ab5c1d10bea60bcb1871e29a118211661" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>UINT<sp/>m_Width{<sp/>800<sp/>};</highlight></codeline>
+<codeline lineno="25" refid="class_d3_d11_engine_1af00a5cf8176049993a34041f6bff60c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>UINT<sp/>m_Height{<sp/>600<sp/>};</highlight></codeline>
+<codeline lineno="26" refid="class_d3_d11_engine_1a54fb3403c09972c76e71e62d50c4db4f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>D3D11_VIEWPORT<sp/><ref refid="class_d3_d11_engine_1a54fb3403c09972c76e71e62d50c4db4f" kindref="member">m_Viewport</ref>;</highlight></codeline>
+<codeline lineno="27" refid="class_d3_d11_engine_1ac8886da4ab55ae100d1e8c26f0acea56" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>XMMATRIX<sp/><ref refid="class_d3_d11_engine_1ac8886da4ab55ae100d1e8c26f0acea56" kindref="member">m_matProjection</ref>;</highlight></codeline>
+<codeline lineno="28" refid="class_d3_d11_engine_1ab3716968d5a742dfce8a7d751e5d8db4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>XMMATRIX<sp/><ref refid="class_d3_d11_engine_1ab3716968d5a742dfce8a7d751e5d8db4" kindref="member">m_matWorld</ref>;</highlight></codeline>
+<codeline lineno="29" refid="class_d3_d11_engine_1a14cf282be763d6172897cc74c3f9e77d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>XMMATRIX<sp/><ref refid="class_d3_d11_engine_1a14cf282be763d6172897cc74c3f9e77d" kindref="member">m_matOrtho</ref>;</highlight></codeline>
+<codeline lineno="30" refid="class_d3_d11_engine_1a9dde146f3abb48e828d6cc61322bc9c3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_Warp{<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="31" refid="class_d3_d11_engine_1adecefe8e243042925603682f539c8f11" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_bVsync{<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="32" refid="class_d3_d11_engine_1ae1d52d018488d09b1e12d9629f904021" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_bFullScreen{<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="33" refid="class_d3_d11_engine_1addfa3aae34ed3e8d63e2b830aff1a6ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_VideoMemory{<sp/>0<sp/>};</highlight></codeline>
+<codeline lineno="34" refid="class_d3_d11_engine_1a1f3e9e9094d537ba879d64b2cb8f0670" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::wstring<sp/><ref refid="class_d3_d11_engine_1a1f3e9e9094d537ba879d64b2cb8f0670" kindref="member">m_VideoCard</ref>;</highlight></codeline>
+<codeline lineno="35" refid="class_d3_d11_engine_1aeac838677634e6e5b7589c966243b84f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>DXGI_FORMAT<sp/>m_BufferFormat{<sp/>DXGI_FORMAT_R8G8B8A8_UNORM<sp/>};</highlight></codeline>
+<codeline lineno="36" refid="class_d3_d11_engine_1af12bd3902d25a7244a4e579abea65d5a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>DXGI_FORMAT<sp/>m_DepthStencilFormat{<sp/>DXGI_FORMAT_D24_UNORM_S8_UINT<sp/>};</highlight></codeline>
+<codeline lineno="37" refid="class_d3_d11_engine_1a394a9483d032590727229558e8f4d8da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ComPtr&lt;IDXGISwapChain&gt;<sp/>m_SwapChain{<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="38" refid="class_d3_d11_engine_1a4299c419b7a9d4101f214be3c4466b81" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ComPtr&lt;ID3D11Device&gt;<sp/>m_Device{<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="39" refid="class_d3_d11_engine_1ac03cd02511b1afe7e43fb1452c855ac4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ComPtr&lt;ID3D11DeviceContext&gt;<sp/>m_Context{<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="40" refid="class_d3_d11_engine_1a7a5237a074b57a682de7825eced3f3fe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ComPtr&lt;ID3D11RenderTargetView&gt;<sp/>m_RenderTargetView{<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="41" refid="class_d3_d11_engine_1a6cae06b9c6d23bb353ff10b5060fcf4e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ComPtr&lt;ID3D11DepthStencilState&gt;<sp/>m_DepthStencilState{<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="42" refid="class_d3_d11_engine_1aff284fc84791cc933cf9708bd65f2319" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ComPtr&lt;ID3D11DepthStencilView&gt;<sp/>m_DepthStencilView{<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="43" refid="class_d3_d11_engine_1a6ff6a7b984fc655e5401c5d326899a51" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ComPtr&lt;ID3D11RasterizerState&gt;<sp/>m_RasterizerState{<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>App<sp/>resources.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="class_d3_d11_engine_1a5dbd794e3654ba93f6599615d5d496b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ComPtr&lt;ID3D11Buffer&gt;<sp/>m_VertexBuffer{<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="47" refid="class_d3_d11_engine_1a4490b1c6930ac925969bfb1620a1a751" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>UINT<sp/>m_VertexCount{<sp/>0<sp/>};</highlight></codeline>
+<codeline lineno="48" refid="class_d3_d11_engine_1a557a0ff83558e0a89544a1153d8fde39" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ComPtr&lt;ID3D11Buffer&gt;<sp/>m_IndexBuffer{<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="49" refid="class_d3_d11_engine_1ac376057d6857ddf9ddc0d7406326221c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>UINT<sp/>m_IndexCount{<sp/>0<sp/>};</highlight></codeline>
+<codeline lineno="50" refid="class_d3_d11_engine_1a6e74455a098abe1ba04957053ff1ba24" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ComPtr&lt;ID3D11InputLayout&gt;<sp/>m_InputLayout{<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="51" refid="class_d3_d11_engine_1a8d569c24bacbf19785344527811ab996" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ComPtr&lt;ID3D11VertexShader&gt;<sp/>m_VertexShader{<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="52" refid="class_d3_d11_engine_1a5788fe373d20267ef990e42440d153d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ComPtr&lt;ID3D11PixelShader&gt;<sp/>m_PixelShader{<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Synchronization<sp/>object.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="class_d3_d11_engine_1a0193ace085d49ef32585bc774db896f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>UINT<sp/>m_FrameIndex{<sp/>0<sp/>};</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//HANDLE<sp/>m_FenceEvent;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//ComPtr&lt;ID3D11Fence&gt;<sp/>m_Fence{<sp/>nullptr<sp/>};</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//UINT64<sp/>m_FenceValue{<sp/>0<sp/>};</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//D3D11_RECT<sp/>m_ScissorRect;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_d3_d11_engine" kindref="compound">D3D11Engine</ref>();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>~<ref refid="class_d3_d11_engine" kindref="compound">D3D11Engine</ref>();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>BeginScene(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>cr,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>cg,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>cb,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>ca);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Render();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>EndScene();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>std::wstring<sp/>GetAssetFullPath(LPCWSTR<sp/>assetName);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>HRESULT<sp/>GetHardwareAdapter(IDXGIFactory4*<sp/>pFactory,<sp/>IDXGIAdapter1**<sp/>ppAdapter,<sp/>IDXGIOutput**<sp/>ppOutput,<sp/>DXGI_MODE_DESC*<sp/>pModeDesc);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>LoadPipeline();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>LoadAssets();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/>PopulateCommandList();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/>WaitforPreviousFrame();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="79" refid="class_d3_d11_engine_1a0e84082d258ec59043ac610b7e85b572" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ID3D11Device<sp/>*<sp/><ref refid="class_d3_d11_engine_1a0e84082d258ec59043ac610b7e85b572" kindref="member">Device</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_Device.Get();<sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Initialize(HWND<sp/>hWnd,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Width,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Height,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>ScreenDepth,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>ScreenNear,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>vSync,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>fullscreen);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Destroy();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>UpdateFrame();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/D3D11Engine.h"/>
+  </compounddef>
+</doxygen>

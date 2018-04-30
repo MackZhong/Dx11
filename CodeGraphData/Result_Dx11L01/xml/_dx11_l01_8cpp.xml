@@ -1,0 +1,238 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_dx11_l01_8cpp" kind="file">
+    <compoundname>Dx11L01.cpp</compoundname>
+    <includes refid="pch_8h" local="yes">pch.h</includes>
+    <includes refid="_dx11_l01_8h" local="yes">Dx11L01.h</includes>
+    <includes refid="_dx11_system_8h" local="yes">Dx11System.h</includes>
+    <incdepgraph>
+      <node id="98">
+        <label>windows.h</label>
+      </node>
+      <node id="99">
+        <label>stdlib.h</label>
+      </node>
+      <node id="97">
+        <label>SDKDDKVer.h</label>
+      </node>
+      <node id="109">
+        <label>wrl.h</label>
+      </node>
+      <node id="112">
+        <label>Dx11L01.h</label>
+        <link refid="_dx11_l01_8h"/>
+      </node>
+      <node id="101">
+        <label>string</label>
+      </node>
+      <node id="105">
+        <label>D3DCompiler.h</label>
+      </node>
+      <node id="115">
+        <label>Dx11Graphics.h</label>
+        <link refid="_dx11_graphics_8h"/>
+        <childnode refid="116" relation="include">
+        </childnode>
+      </node>
+      <node id="103">
+        <label>exception</label>
+      </node>
+      <node id="111">
+        <label>DX11Helper.h</label>
+        <link refid="_d_x11_helper_8h"/>
+      </node>
+      <node id="116">
+        <label>D3D11Engine.h</label>
+        <link refid="_d3_d11_engine_8h"/>
+      </node>
+      <node id="104">
+        <label>D3d11_4.h</label>
+      </node>
+      <node id="108">
+        <label>dxgi1_4.h</label>
+      </node>
+      <node id="96">
+        <label>targetver.h</label>
+        <link refid="targetver_8h"/>
+        <childnode refid="97" relation="include">
+        </childnode>
+      </node>
+      <node id="106">
+        <label>DirectXMath.h</label>
+      </node>
+      <node id="114">
+        <label>Dx11Input.h</label>
+        <link refid="_dx11_input_8h"/>
+      </node>
+      <node id="102">
+        <label>iostream</label>
+      </node>
+      <node id="107">
+        <label>DirectXColors.h</label>
+      </node>
+      <node id="113">
+        <label>Dx11System.h</label>
+        <link refid="_dx11_system_8h"/>
+        <childnode refid="114" relation="include">
+        </childnode>
+        <childnode refid="115" relation="include">
+        </childnode>
+      </node>
+      <node id="94">
+        <label>D:/Documents/VS2017/repos/Dx11/Dx11L01/Dx11L01.cpp</label>
+        <link refid="Dx11L01.cpp"/>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="112" relation="include">
+        </childnode>
+        <childnode refid="113" relation="include">
+        </childnode>
+      </node>
+      <node id="95">
+        <label>pch.h</label>
+        <link refid="pch_8h"/>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+        <childnode refid="101" relation="include">
+        </childnode>
+        <childnode refid="102" relation="include">
+        </childnode>
+        <childnode refid="103" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="105" relation="include">
+        </childnode>
+        <childnode refid="106" relation="include">
+        </childnode>
+        <childnode refid="107" relation="include">
+        </childnode>
+        <childnode refid="108" relation="include">
+        </childnode>
+        <childnode refid="109" relation="include">
+        </childnode>
+        <childnode refid="110" relation="include">
+        </childnode>
+        <childnode refid="111" relation="include">
+        </childnode>
+      </node>
+      <node id="110">
+        <label>shellapi.h</label>
+      </node>
+      <node id="100">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_dx11_l01_8cpp_1a6606f47cf1adea7493417b4f391edcde" prot="public" static="no" mutable="no">
+        <type>const WORD</type>
+        <definition>const WORD StringBufferLength</definition>
+        <argsstring></argsstring>
+        <name>StringBufferLength</name>
+        <initializer>= 100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L01/Dx11L01.cpp" line="8" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L01/Dx11L01.cpp" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_dx11_l01_8cpp_1aec21849299120934e9bda3da28b051f1" prot="public" static="no" mutable="no">
+        <type>WCHAR</type>
+        <definition>WCHAR szTitle[StringBufferLength]</definition>
+        <argsstring>[StringBufferLength]</argsstring>
+        <name>szTitle</name>
+        <initializer>= L&quot;DirectX 11 Lesson 01: Setup Development environment&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L01/Dx11L01.cpp" line="11" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L01/Dx11L01.cpp" bodystart="11" bodyend="-1"/>
+        <referencedby refid="_dx11_l01_8cpp_1a1e683c5a19c00d05cd803e46b805e339" compoundref="_dx11_l01_8cpp" startline="13" endline="32">wWinMain</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_dx11_l01_8cpp_1a1e683c5a19c00d05cd803e46b805e339" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int APIENTRY</type>
+        <definition>int APIENTRY wWinMain</definition>
+        <argsstring>(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _In_ LPWSTR lpCmdLine, _In_ int nCmdShow)</argsstring>
+        <name>wWinMain</name>
+        <param>
+          <type>_In_ HINSTANCE</type>
+          <declname>hInstance</declname>
+        </param>
+        <param>
+          <type>_In_opt_ HINSTANCE</type>
+          <declname>hPrevInstance</declname>
+        </param>
+        <param>
+          <type>_In_ LPWSTR</type>
+          <declname>lpCmdLine</declname>
+        </param>
+        <param>
+          <type>_In_ int</type>
+          <declname>nCmdShow</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/VS2017/repos/Dx11/Dx11L01/Dx11L01.cpp" line="13" column="1" bodyfile="D:/Documents/VS2017/repos/Dx11/Dx11L01/Dx11L01.cpp" bodystart="13" bodyend="32"/>
+        <references refid="class_dx11_system_1a600d8df8fad77747cad2cc5bf0845827" compoundref="_dx11_system_8cpp" startline="82" endline="87">Dx11System::Destroy</references>
+        <references refid="class_dx11_system_1a9c80b246f8a0c28dd440fbf52a3fb829" compoundref="_dx11_system_8cpp" startline="36" endline="54">Dx11System::Initialize</references>
+        <references refid="class_dx11_system_1a269968e3a450029fc5de46906ca1acbe" compoundref="_dx11_system_8cpp" startline="56" endline="80">Dx11System::Run</references>
+        <references refid="_dx11_l01_8cpp_1aec21849299120934e9bda3da28b051f1" compoundref="_dx11_l01_8cpp" startline="11">szTitle</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//Dx11L01.cpp:<sp/>定义应用程序的入口点。</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pch_8h" kindref="compound">pch.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_dx11_l01_8h" kindref="compound">Dx11L01.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_dx11_system_8h" kindref="compound">Dx11System.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="_dx11_l01_8cpp_1a6606f47cf1adea7493417b4f391edcde" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>WORD<sp/><ref refid="_dx11_l01_8cpp_1a6606f47cf1adea7493417b4f391edcde" kindref="member">StringBufferLength</ref><sp/>=<sp/>100;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>全局变量:<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="_dx11_l01_8cpp_1aec21849299120934e9bda3da28b051f1" refkind="member"><highlight class="normal">WCHAR<sp/><ref refid="_dx11_l01_8cpp_1aec21849299120934e9bda3da28b051f1" kindref="member">szTitle</ref>[<ref refid="_dx11_l01_8cpp_1a6606f47cf1adea7493417b4f391edcde" kindref="member">StringBufferLength</ref>]<sp/>=<sp/>L</highlight><highlight class="stringliteral">&quot;DirectX<sp/>11<sp/>Lesson<sp/>01:<sp/>Setup<sp/>Development<sp/>environment&quot;</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>标题栏文本</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="_dx11_l01_8cpp_1a1e683c5a19c00d05cd803e46b805e339" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>APIENTRY<sp/><ref refid="_dx11_l01_8cpp_1a1e683c5a19c00d05cd803e46b805e339" kindref="member">wWinMain</ref>(_In_<sp/>HINSTANCE<sp/>hInstance,</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_In_opt_<sp/>HINSTANCE<sp/>hPrevInstance,</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_In_<sp/>LPWSTR<sp/><sp/><sp/><sp/>lpCmdLine,</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_In_<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nCmdShow)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>UNREFERENCED_PARAMETER(hPrevInstance);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>UNREFERENCED_PARAMETER(lpCmdLine);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//auto<sp/>dxSystem<sp/>=<sp/>std::make_unique&lt;Dx11System&gt;(hInstance,<sp/>lpCmdLine);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_dx11_system" kindref="compound">Dx11System</ref><sp/>dxSystem(hInstance,<sp/>lpCmdLine);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dxSystem.<ref refid="class_dx11_system_1a9c80b246f8a0c28dd440fbf52a3fb829" kindref="member">Initialize</ref>(<ref refid="_dx11_l01_8cpp_1aec21849299120934e9bda3da28b051f1" kindref="member">szTitle</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dxSystem.<ref refid="class_dx11_system_1a269968e3a450029fc5de46906ca1acbe" kindref="member">Run</ref>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>dxSystem.<ref refid="class_dx11_system_1a600d8df8fad77747cad2cc5bf0845827" kindref="member">Destroy</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//delete<sp/>dxSystem;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//dxSystem<sp/>=<sp/>nullptr;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Documents/VS2017/repos/Dx11/Dx11L01/Dx11L01.cpp"/>
+  </compounddef>
+</doxygen>

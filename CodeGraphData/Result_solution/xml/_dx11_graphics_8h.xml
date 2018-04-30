@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_dx11_graphics_8h" kind="file">
+    <compoundname>Dx11Graphics.h</compoundname>
+    <includes refid="_d3_d11_engine_8h" local="yes">D3D11Engine.h</includes>
+    <includedby refid="_dx11_graphics_8cpp" local="yes">D:/Documents/VS2017/repos/Dx11/Dx11L01/Dx11Graphics.cpp</includedby>
+    <includedby refid="_dx11_system_8h" local="yes">D:/Documents/VS2017/repos/Dx11/Dx11L01/Dx11System.h</includedby>
+    <incdepgraph>
+      <node id="52">
+        <label>D:/Documents/VS2017/repos/Dx11/Dx11L01/Dx11Graphics.h</label>
+        <link refid="Dx11Graphics.h"/>
+        <childnode refid="53" relation="include">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>D3D11Engine.h</label>
+        <link refid="_d3_d11_engine_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="58">
+        <label>D:/Documents/VS2017/repos/Dx11/Dx11L01/Dx11System.cpp</label>
+        <link refid="_dx11_system_8cpp"/>
+      </node>
+      <node id="54">
+        <label>D:/Documents/VS2017/repos/Dx11/Dx11L01/Dx11Graphics.h</label>
+        <link refid="Dx11Graphics.h"/>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>D:/Documents/VS2017/repos/Dx11/Dx11L01/Dx11Graphics.cpp</label>
+        <link refid="_dx11_graphics_8cpp"/>
+      </node>
+      <node id="56">
+        <label>D:/Documents/VS2017/repos/Dx11/Dx11L01/Dx11System.h</label>
+        <link refid="_dx11_system_8h"/>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+      </node>
+      <node id="57">
+        <label>D:/Documents/VS2017/repos/Dx11/Dx11L01/Dx11L01.cpp</label>
+        <link refid="_dx11_l01_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_dx11_graphics" prot="public">Dx11Graphics</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_d3_d11_engine_8h" kindref="compound">D3D11Engine.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="class_dx11_graphics" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_dx11_graphics" kindref="compound">Dx11Graphics</ref></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="7" refid="class_dx11_graphics_1a7475373df3533725035e0a9b8d61c618" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_dx11_graphics_1a7475373df3533725035e0a9b8d61c618" kindref="member">m_ScreenDepth</ref>{<sp/>1000.0f<sp/>};</highlight></codeline>
+<codeline lineno="8" refid="class_dx11_graphics_1a7cf39c42e5477d84f31a5deb13d4730d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_dx11_graphics_1a7cf39c42e5477d84f31a5deb13d4730d" kindref="member">m_ScreenNear</ref>{<sp/>0.1f<sp/>};</highlight></codeline>
+<codeline lineno="9" refid="class_dx11_graphics_1a843ff38c2f778bfbd20c69a1d9364f54" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_dx11_graphics_1a843ff38c2f778bfbd20c69a1d9364f54" kindref="member">m_vSync</ref>{<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="10" refid="class_dx11_graphics_1a3cc5c486c251fcd43991e86194d5bab2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_d3_d11_engine" kindref="compound">D3D11Engine</ref><sp/><ref refid="class_dx11_graphics_1a3cc5c486c251fcd43991e86194d5bab2" kindref="member">m_DxEngine</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_dx11_graphics_1a9e9a462473fe50e93a0f29a133c95c58" kindref="member">Dx11Graphics</ref>();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_dx11_graphics_1a0b9495d63800ccc9f3a7b7d6fbffb0e8" kindref="member">~Dx11Graphics</ref>();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_dx11_graphics_1a9e507922d353c6a815c804e672c9b656" kindref="member">Initialize</ref>(HWND<sp/>hWnd,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Width,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Height,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>fullscreen);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_dx11_graphics_1a40cb1058947853abc42e756e4f68ddb1" kindref="member">Destroy</ref>();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_dx11_graphics_1ad0ace17622f926baf7b6f374ee5050b0" kindref="member">UpdateFrame</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_dx11_graphics_1ab70ee35be358c0a67d4f350a87b35d7f" kindref="member">Render</ref>();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="D:/Documents/VS2017/repos/Dx11/Dx11L01/Dx11Graphics.h"/>
+  </compounddef>
+</doxygen>

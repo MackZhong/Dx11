@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespace_microsoft_1_1_w_r_l" kind="namespace">
+    <compoundname>Microsoft::WRL</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/VS2017/repos/Dx11/Dx11L02/D3D11Engine.h" line="6" column="1"/>
+  </compounddef>
+</doxygen>
