@@ -1,6 +1,8 @@
 #pragma once
 #include <d3d11_4.h>
 #include <dxgi1_6.h>
+#pragma comment(lib, "d3d11.lib")
+#pragma comment(lib, "dxguid.lib")
 #include <DirectXMath.h>
 using namespace DirectX;
 #include <d3dcompiler.h>
@@ -21,7 +23,12 @@ private:
 		XMFLOAT3 Pos;
 		XMFLOAT3 Color;
 	};
-	D3D11_INPUT_ELEMENT_DESC *layout;
+	D3D11_INPUT_ELEMENT_DESC layout[2]{
+		{ "POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, 0, D3D11_INPUT_PER_VERTEX_DATA, 0 },
+	{ "COLOR", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, D3D11_APPEND_ALIGNED_ELEMENT, D3D11_INPUT_PER_VERTEX_DATA, 0 },
+	//{ L"TEXCOORD", 0, DXGI_FORMAT_R32G32_FLOAT, 0, D3D11_APPEND_ALIGNED_ELEMENT,	D3D11_INPUT_PER_VERTEX_DATA, 0 },
+	//{ L"NORMAL", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, D3D11_APPEND_ALIGNED_ELEMENT,	D3D11_INPUT_PER_VERTEX_DATA, 0 },
+	};
 
 
 	HWND g_hWnd{ NULL };
@@ -102,10 +109,10 @@ private:
 			lvl, _countof(lvl),
 			D3D11_SDK_VERSION,
 			&sd,
-			&this->g_pSwapChain,
-			&this->g_pd3dDevice,
+			this->g_pSwapChain.ReleaseAndGetAddressOf(),
+			this->g_pd3dDevice.ReleaseAndGetAddressOf(),
 			&FeatureLevelsSupported,
-			&this->g_pImmediateContext);
+			this->g_pImmediateContext.ReleaseAndGetAddressOf());
 		if (hr == E_INVALIDARG)
 		{
 			hr = D3D11CreateDeviceAndSwapChain(nullptr,
@@ -114,28 +121,28 @@ private:
 				&lvl[1], _countof(lvl) - 1,
 				D3D11_SDK_VERSION,
 				&sd,
-				&this->g_pSwapChain,
-				&this->g_pd3dDevice,
+				this->g_pSwapChain.ReleaseAndGetAddressOf(),
+				this->g_pd3dDevice.ReleaseAndGetAddressOf(),
 				&FeatureLevelsSupported,
-				&this->g_pImmediateContext);
+				this->g_pImmediateContext.ReleaseAndGetAddressOf());
 		}
 		if (FAILED(hr)) {
 			return hr;
 		}
 
-		ID3D11Texture2D* pBackBuffer;
+		MWRL::ComPtr<ID3D11Texture2D> pBackBuffer;
 
 		// Get a pointer to the back buffer
-		hr = this->g_pSwapChain->GetBuffer(0, __uuidof(ID3D11Texture2D), (LPVOID*)&pBackBuffer);
+		hr = this->g_pSwapChain->GetBuffer(0, __uuidof(ID3D11Texture2D), (LPVOID*)pBackBuffer.ReleaseAndGetAddressOf());
 
 		// Create a render-target view
-		this->g_pd3dDevice->CreateRenderTargetView(pBackBuffer, NULL,
-			&this->g_pRenderTargetView);
-		pBackBuffer->Release();
-		pBackBuffer = nullptr;
+		this->g_pd3dDevice->CreateRenderTargetView(pBackBuffer.Get(), NULL,
+			this->g_pRenderTargetView.ReleaseAndGetAddressOf());
 
 		// Bind the view
-		this->g_pImmediateContext->OMSetRenderTargets(1, &this->g_pRenderTargetView, NULL);
+		ID3D11RenderTargetView* targets[1];
+		targets[0] = this->g_pRenderTargetView.Get();
+		this->g_pImmediateContext->OMSetRenderTargets(1, targets, NULL);
 
 		// Setup the viewport
 		D3D11_VIEWPORT vp;
@@ -217,7 +224,7 @@ private:
 		InitData.SysMemSlicePitch = 0;
 
 		// Create the vertex buffer.
-		hr = this->g_pd3dDevice->CreateBuffer(&bufferDesc, &InitData, &this->g_pVertexBuffer);
+		hr = this->g_pd3dDevice->CreateBuffer(&bufferDesc, &InitData, this->g_pVertexBuffer.ReleaseAndGetAddressOf());
 
 		// Create indices.
 		unsigned short indices[] = { 0, 1, 2 };
@@ -230,7 +237,7 @@ private:
 		InitData.pSysMem = indices;
 
 		// Create the buffer with the device.
-		hr = this->g_pd3dDevice->CreateBuffer(&bufferDesc, &InitData, &this->g_pIndexBuffer);
+		hr = this->g_pd3dDevice->CreateBuffer(&bufferDesc, &InitData, this->g_pIndexBuffer.ReleaseAndGetAddressOf());
 		if (FAILED(hr))
 			return hr;
 
@@ -246,29 +253,25 @@ private:
 		};
 		ID3DBlob* errorBlob = nullptr;
 		LPCSTR profile = (this->g_pd3dDevice->GetFeatureLevel() >= D3D_FEATURE_LEVEL_11_0) ? "vs_5_0" : "vs_4_0";
-		ID3DBlob* VSshaderBlob = nullptr;
-		hr = this->CompileShader(L"VertexShader.hlsl", "main", profile, &VSshaderBlob);
-		LPCSTR profile = (this->g_pd3dDevice->GetFeatureLevel() >= D3D_FEATURE_LEVEL_11_0) ? "ps_5_0" : "ps_4_0";
-		ID3DBlob* PSshaderBlob = nullptr;
-		hr = this->CompileShader(L"PixelShader.hlsl", "main", profile, &PSshaderBlob);
+		MWRL::ComPtr<ID3DBlob> VSshaderBlob = nullptr;
+		hr = this->CompileShader(L"VertexShader.hlsl", "main", profile, VSshaderBlob.ReleaseAndGetAddressOf());
+		profile = (this->g_pd3dDevice->GetFeatureLevel() >= D3D_FEATURE_LEVEL_11_0) ? "ps_5_0" : "ps_4_0";
+		MWRL::ComPtr<ID3DBlob> PSshaderBlob = nullptr;
+		hr = this->CompileShader(L"PixelShader.hlsl", "main", profile, PSshaderBlob.ReleaseAndGetAddressOf());
 
-		hr = this->g_pd3dDevice->CreateVertexShader(VSshaderBlob->GetBufferPointer(), VSshaderBlob->GetBufferSize(), nullptr, &m_VertexShader);
-		hr = this->g_pd3dDevice->CreatePixelShader(PSshaderBlob->GetBufferPointer(), PSshaderBlob->GetBufferSize(), nullptr, &m_PixelShader);
+		hr = this->g_pd3dDevice->CreateVertexShader(VSshaderBlob->GetBufferPointer(), VSshaderBlob->GetBufferSize(),
+			nullptr, this->m_VertexShader.ReleaseAndGetAddressOf());
+		hr = this->g_pd3dDevice->CreatePixelShader(PSshaderBlob->GetBufferPointer(), PSshaderBlob->GetBufferSize(),
+			nullptr, this->m_PixelShader.ReleaseAndGetAddressOf());
 
-		hr = this->g_pd3dDevice->CreateInputLayout(this->layout, 2, VSshaderBlob->GetBufferPointer(), VSshaderBlob->GetBufferSize(), &this->g_pVertexLayout);
+		hr = this->g_pd3dDevice->CreateInputLayout(this->layout, 2, VSshaderBlob->GetBufferPointer(), VSshaderBlob->GetBufferSize(),
+			this->g_pVertexLayout.ReleaseAndGetAddressOf());
 
 		return hr;
 	}
 
 public:
 	Dx11Engine() {
-		this->layout = new D3D11_INPUT_ELEMENT_DESC[2]
-		{
-			{ "POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, 0, D3D11_INPUT_PER_VERTEX_DATA, 0 },
-			{ "COLOR", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, D3D11_APPEND_ALIGNED_ELEMENT, D3D11_INPUT_PER_VERTEX_DATA, 0 },
-			//{ L"TEXCOORD", 0, DXGI_FORMAT_R32G32_FLOAT, 0, D3D11_APPEND_ALIGNED_ELEMENT,	D3D11_INPUT_PER_VERTEX_DATA, 0 },
-			//{ L"NORMAL", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, D3D11_APPEND_ALIGNED_ELEMENT,	D3D11_INPUT_PER_VERTEX_DATA, 0 },
-		};
 	};
 
 	~Dx11Engine() {};
@@ -277,8 +280,11 @@ public:
 	HRESULT Initialize(HWND hWnd) {
 		this->g_hWnd = hWnd;
 
-		this->CreateDeviceandContext();
-		this->CreateResources();
+		HRESULT hr = this->CreateDeviceandContext();
+		if (FAILED(hr)) {
+			return hr;
+		}
+		return this->CreateResources();
 	}
 
 	void Render() {
@@ -300,6 +306,6 @@ public:
 
 		this->g_pImmediateContext->DrawIndexed(3, 0, 0);
 
-		//this -
+		this->g_pSwapChain->Present(0, 0);
 	}
 };
