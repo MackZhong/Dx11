@@ -1,15 +1,18 @@
 #include "Header.hlsli"
 
-struct PS_INPUT
-{
-    float4 position : SV_POSITION;
-    float3 color : COLOR;
-};
-
+//struct ColorInput {
+//	float4 position : POSITION;
+//	float4 color : COLOR;
+//};
 //--------------------------------------------------------------------------------------
 // Pixel Shader
 //--------------------------------------------------------------------------------------
-float4 main(PS_INPUT input) : SV_TARGET
+float4 main(VS_OUTPUT input) : SV_TARGET
 {
-    return float4(input.color, 1.0f);
+    return input.color;
+}
+
+float4 wireFrame(VS_OUTPUT input) : SV_TARGET
+{
+    return float4(0.0f, 1.0f, 0.0f, 1.0f);
 }

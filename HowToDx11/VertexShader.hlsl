@@ -1,15 +1,19 @@
 #include "Header.hlsli"
 
+cbuffer PerApplication : register(b0) {
+	matrix projectionMatrix;
+}
+cbuffer PerFrame : register(b1) {
+	matrix viewMatrix;
+}
+cbuffer PerObject : register(b2) {
+	matrix worldMatrix;
+}
+
 struct VS_INPUT
 {
-    float4 vPosition : POSITION;
-    float3 color : COLOR;
-};
-
-struct VS_OUTPUT
-{
-    float4 vPosition : SV_POSITION;
-    float3 color : COLOR;
+	float3 vPosition : POSITION;
+	float3 color : COLOR;
 };
 
 //--------------------------------------------------------------------------------------
@@ -17,9 +21,11 @@ struct VS_OUTPUT
 //--------------------------------------------------------------------------------------
 VS_OUTPUT main(VS_INPUT input)
 {
-    VS_OUTPUT output;
-    output.vPosition = input.vPosition;
-    output.color = input.color;
+	VS_OUTPUT output;
+	matrix mvp = mul(projectionMatrix, mul(viewMatrix, worldMatrix));
+	output.vPosition = mul(mvp, float4(input.vPosition, 1.0f));
+	//output.vPosition = float4(input.vPosition, 1.0f);
+	output.color = float4(input.color, 1.0f);
 
 	return output;
 }

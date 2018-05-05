@@ -23,10 +23,10 @@ private:
 	ComPtr<ID3D11DepthStencilView> m_pDepthStencilView{ nullptr };
 	ComPtr<ID3D11Texture2D>			m_pDepthStencilBuffer{ nullptr };
 	ComPtr<ID3D11DepthStencilState>	m_pDepthStencilState{ nullptr };
-	ComPtr < ID3D11RasterizerState>	m_pRasterizerState{ nullptr };
+	ComPtr < ID3D11RasterizerState>	m_pRasterizerStateNormal{ nullptr };
+	ComPtr < ID3D11RasterizerState>	m_pRasterizerStateFrame{ nullptr };
 	ComPtr<ID3D11Buffer>	m_AppConstantBuffer{ nullptr };
 	ComPtr<ID3D11Buffer>	m_FrameConstantBuffer{ nullptr };
-	XMMATRIX m_ProjectionMatrix;
 	std::unique_ptr<Dx11Camera> m_Camera{ nullptr };
 	std::unique_ptr<Dx11Model>	m_Model{ nullptr };
 
@@ -176,8 +176,12 @@ private:
 			rasterizerDesc.MultisampleEnable = FALSE;
 			rasterizerDesc.ScissorEnable = FALSE;
 			rasterizerDesc.SlopeScaledDepthBias = 0.0f;
-			hr = m_pd3dDevice->CreateRasterizerState(&rasterizerDesc, this->m_pRasterizerState.ReleaseAndGetAddressOf());
+			hr = m_pd3dDevice->CreateRasterizerState(&rasterizerDesc, this->m_pRasterizerStateNormal.ReleaseAndGetAddressOf());
 			if (FAILED(hr)) return hr;
+
+			rasterizerDesc.FillMode = D3D11_FILL_WIREFRAME;
+			hr = m_pd3dDevice->CreateRasterizerState(&rasterizerDesc, this->m_pRasterizerStateFrame.ReleaseAndGetAddressOf());
+
 		}
 
 		{
@@ -201,11 +205,31 @@ private:
 		m_Camera = std::make_unique<Dx11Camera>();
 
 		m_Model = std::make_unique<Dx11Model>();
-		if (m_Model) {
-			return m_Model->Initialize(m_pd3dDevice.Get());
+		if (!m_Model) {
+			return E_FAIL;
 		}
 
-		return E_FAIL;
+		hr = m_Model->Initialize(m_pd3dDevice.Get());
+		if (FAILED(hr)) return hr;
+
+		// Create the constant buffers for the view and projection Matrix
+		D3D11_BUFFER_DESC bufferDesc;
+		bufferDesc.BindFlags = D3D11_BIND_CONSTANT_BUFFER;
+		bufferDesc.Usage = D3D11_USAGE_DEFAULT;
+		bufferDesc.ByteWidth = sizeof(XMMATRIX);
+		bufferDesc.CPUAccessFlags = 0;
+		bufferDesc.MiscFlags = 0;
+		hr = m_pd3dDevice->CreateBuffer(&bufferDesc, nullptr, this->m_AppConstantBuffer.ReleaseAndGetAddressOf());
+		if (FAILED(hr)) return hr;
+
+		hr = m_pd3dDevice->CreateBuffer(&bufferDesc, nullptr, this->m_FrameConstantBuffer.ReleaseAndGetAddressOf());
+		if (FAILED(hr)) return hr;
+
+		XMMATRIX& matProjection = this->m_Camera->SetProjection((float)m_Width, (float)m_Height);
+		this->m_pImmediateContext->UpdateSubresource(m_AppConstantBuffer.Get(), 0, nullptr, &matProjection, 0, 0);
+		this->m_pImmediateContext->VSSetConstantBuffers(0, 1, m_AppConstantBuffer.GetAddressOf());
+
+		return hr;
 	}
 
 public:
@@ -224,6 +248,7 @@ public:
 		if (FAILED(hr)) {
 			return hr;
 		}
+
 		return this->CreateResources();
 	}
 
@@ -236,17 +261,34 @@ public:
 		if (m_Model) {
 			m_Model->Update(deltaTime);
 		}
+		if (m_Camera) {
+			m_Camera->Update(deltaTime);
+			XMMATRIX& matView = m_Camera->View();
+			this->m_pImmediateContext->UpdateSubresource(m_FrameConstantBuffer.Get(), 0, nullptr, &matView, 0, 0);
+		}
 		return hr;
 	}
 
 	void DrawFrame() const {
 		FLOAT bkClr[4] = { 0.0F, 0.0F, 1.0F, 1.0F };
 		this->m_pImmediateContext->ClearRenderTargetView(this->m_pRenderTargetView.Get(), bkClr);
+		this->m_pImmediateContext->ClearDepthStencilView(this->m_pDepthStencilView.Get(), D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0);
 
+		//this->m_pImmediateContext->RSSetViewports(this->)
+		this->m_pImmediateContext->OMSetDepthStencilState(this->m_pDepthStencilState.Get(), 1);
+
+		this->m_pImmediateContext->VSSetConstantBuffers(0, 1, m_AppConstantBuffer.GetAddressOf());
+		this->m_pImmediateContext->VSSetConstantBuffers(1, 1, m_FrameConstantBuffer.GetAddressOf());
+
+		this->m_pImmediateContext->RSSetState(this->m_pRasterizerStateNormal.Get());
 		if (m_Model) {
-			m_Model->Render(this->m_pImmediateContext.Get(), m_Camera->View(), m_ProjectionMatrix);
+			m_Model->Render(this->m_pImmediateContext.Get(), m_Camera->View(), m_Camera->Projection());
+		}
+		this->m_pImmediateContext->RSSetState(this->m_pRasterizerStateFrame.Get());
+		if (m_Model) {
+			m_Model->Render(this->m_pImmediateContext.Get(), m_Camera->View(), m_Camera->Projection(), true);
 		}
 
-		this->m_pSwapChain->Present(0, 0);
+		this->m_pSwapChain->Present(m_vSync ? 1 : 0, 0);
 	}
 };

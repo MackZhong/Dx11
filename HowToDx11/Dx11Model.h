@@ -26,11 +26,13 @@ private:
 	//{ L"NORMAL", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, D3D11_APPEND_ALIGNED_ELEMENT,	D3D11_INPUT_PER_VERTEX_DATA, 0 },
 	};
 
+	ComPtr<ID3D11DeviceContext>		m_Context{ nullptr };
 	ComPtr<ID3D11Buffer>			m_pVertexBuffer{ nullptr };
 	ComPtr<ID3D11Buffer>			m_pIndexBuffer{ nullptr };
-	ComPtr<ID3D11InputLayout>			m_pVertexLayout{ nullptr };
-	ComPtr<ID3D11VertexShader>			m_VertexShader{ nullptr };
-	ComPtr<ID3D11PixelShader>			m_PixelShader{ nullptr };
+	ComPtr<ID3D11InputLayout>		m_pVertexLayout{ nullptr };
+	ComPtr<ID3D11VertexShader>		m_VertexShader{ nullptr };
+	ComPtr<ID3D11PixelShader>		m_PixelShader{ nullptr };
+	ComPtr<ID3D11PixelShader>		m_PixelShaderFrame{ nullptr };
 	ComPtr<ID3D11Buffer>	m_ObjConstantBuffer{ nullptr };
 	XMMATRIX m_WorldMatrix;
 	UINT m_IndexCount{ 0 };
@@ -38,6 +40,7 @@ private:
 public:
 	HRESULT Initialize(ID3D11Device* pd3dDevice) {
 		HRESULT hr = S_OK;
+		pd3dDevice->GetImmediateContext(m_Context.ReleaseAndGetAddressOf());
 
 		SimpleVertexCombined verticesCombo[8]
 		{
@@ -54,9 +57,9 @@ public:
 		// Supply the actual vertex data.
 		// Fill in a buffer description.
 		D3D11_BUFFER_DESC bufferDesc;
+		bufferDesc.BindFlags = D3D11_BIND_VERTEX_BUFFER;
 		bufferDesc.Usage = D3D11_USAGE_DEFAULT;
 		bufferDesc.ByteWidth = sizeof(verticesCombo);
-		bufferDesc.BindFlags = D3D11_BIND_VERTEX_BUFFER;
 		bufferDesc.CPUAccessFlags = 0;
 		bufferDesc.MiscFlags = 0;
 
@@ -71,18 +74,18 @@ public:
 
 		// Create indices.
 		unsigned short indices[] = {
-			7, 6, 1, 7, 1, 0,
+			4, 5, 1, 4, 1, 0,
 			0, 1, 2, 0, 2, 3,
-			3, 2, 5, 3, 5, 4,
-			1, 6, 5, 1, 5, 2,
-			4, 5, 6, 4, 6, 7,
-			7, 0, 3, 7, 3, 4
+			3, 2, 6, 3, 6, 7,
+			1, 5, 6, 1, 6, 2,
+			5, 4, 7, 5, 7, 6,
+			4, 0, 3, 4, 3, 7
 		};
 		m_IndexCount = 36;
 
 		// Fill in a buffer description.
-		bufferDesc.ByteWidth = sizeof(indices);
 		bufferDesc.BindFlags = D3D11_BIND_INDEX_BUFFER;
+		bufferDesc.ByteWidth = sizeof(indices);
 
 		// Define the resource data.
 		InitData.pSysMem = indices;
@@ -104,28 +107,43 @@ public:
 		};
 		ID3DBlob* errorBlob = nullptr;
 		LPCSTR profile = (pd3dDevice->GetFeatureLevel() >= D3D_FEATURE_LEVEL_11_0) ? "vs_5_0" : "vs_4_0";
-		ComPtr<ID3DBlob> VSshaderBlob = nullptr;
-		hr = CompileShader(L"VertexShader.hlsl", "main", profile, VSshaderBlob.ReleaseAndGetAddressOf());
-		profile = (pd3dDevice->GetFeatureLevel() >= D3D_FEATURE_LEVEL_11_0) ? "ps_5_0" : "ps_4_0";
-		ComPtr<ID3DBlob> PSshaderBlob = nullptr;
-		hr = CompileShader(L"PixelShader.hlsl", "main", profile, PSshaderBlob.ReleaseAndGetAddressOf());
-
-		hr = pd3dDevice->CreateVertexShader(VSshaderBlob->GetBufferPointer(), VSshaderBlob->GetBufferSize(),
+		ComPtr<ID3DBlob> shaderBlob = nullptr;
+		hr = CompileShader(L"VertexShader.hlsl", "main", profile, shaderBlob.ReleaseAndGetAddressOf());
+		hr = pd3dDevice->CreateVertexShader(shaderBlob->GetBufferPointer(), shaderBlob->GetBufferSize(),
 			nullptr, this->m_VertexShader.ReleaseAndGetAddressOf());
-		hr = pd3dDevice->CreatePixelShader(PSshaderBlob->GetBufferPointer(), PSshaderBlob->GetBufferSize(),
+		hr = pd3dDevice->CreateInputLayout(this->layout, 2, shaderBlob->GetBufferPointer(), shaderBlob->GetBufferSize(),
+			this->m_pVertexLayout.ReleaseAndGetAddressOf());
+
+		profile = (pd3dDevice->GetFeatureLevel() >= D3D_FEATURE_LEVEL_11_0) ? "ps_5_0" : "ps_4_0";
+		hr = CompileShader(L"PixelShader.hlsl", "main", profile, shaderBlob.ReleaseAndGetAddressOf());
+		hr = pd3dDevice->CreatePixelShader(shaderBlob->GetBufferPointer(), shaderBlob->GetBufferSize(),
 			nullptr, this->m_PixelShader.ReleaseAndGetAddressOf());
 
-		hr = pd3dDevice->CreateInputLayout(this->layout, 2, VSshaderBlob->GetBufferPointer(), VSshaderBlob->GetBufferSize(),
-			this->m_pVertexLayout.ReleaseAndGetAddressOf());
+		hr = CompileShader(L"PixelShader.hlsl", "wireFrame", profile, shaderBlob.ReleaseAndGetAddressOf());
+		hr = pd3dDevice->CreatePixelShader(shaderBlob->GetBufferPointer(), shaderBlob->GetBufferSize(),
+			nullptr, this->m_PixelShaderFrame.ReleaseAndGetAddressOf());
+
+		// Create the constant buffers for the object's world
+		bufferDesc.BindFlags = D3D11_BIND_CONSTANT_BUFFER;
+		bufferDesc.ByteWidth = sizeof(XMMATRIX);
+		hr = pd3dDevice->CreateBuffer(&bufferDesc, nullptr, this->m_ObjConstantBuffer.ReleaseAndGetAddressOf());
+		if (FAILED(hr)) return hr;
 
 		return hr;
 	}
 
-	void Update(float fTime) {
+	const XMMATRIX* World() const { return &m_WorldMatrix; }
+	ID3D11Buffer* Constants() const { return m_ObjConstantBuffer.Get(); }
 
+	void Update(float fTime) {
+		static float angle = 0.0f;
+		angle += 90.0f * fTime;
+		//XMVECTOR rotation = XMVectorSet(0, 1, 1, 0);
+		m_WorldMatrix = XMMatrixRotationY(XMConvertToRadians(angle));
+		this->m_Context->UpdateSubresource(m_ObjConstantBuffer.Get(), 0, nullptr, &m_WorldMatrix, 0, 0);
 	}
 
-	void Render(ID3D11DeviceContext* pd3dDeviceContext, const XMMATRIX& viewMatrix, const XMMATRIX& projMatrix) const {
+	void Render(ID3D11DeviceContext* pd3dDeviceContext, const XMMATRIX& viewMatrix, const XMMATRIX& projMatrix, bool wireFrame = false) const {
 		UINT stride[1] = { sizeof(SimpleVertexCombined) };
 		UINT offset[1] = { 0 };
 		pd3dDeviceContext->IASetVertexBuffers(0, 1, this->m_pVertexBuffer.GetAddressOf(), stride, offset);
@@ -136,8 +154,14 @@ public:
 		pd3dDeviceContext->IASetPrimitiveTopology(D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
 
 		pd3dDeviceContext->VSSetShader(this->m_VertexShader.Get(), nullptr, 0);
+		pd3dDeviceContext->VSSetConstantBuffers(2, 1, m_ObjConstantBuffer.GetAddressOf());
 
-		pd3dDeviceContext->PSSetShader(this->m_PixelShader.Get(), nullptr, 0);
+		if (wireFrame) {
+			pd3dDeviceContext->PSSetShader(this->m_PixelShaderFrame.Get(), nullptr, 0);
+		}
+		else {
+			pd3dDeviceContext->PSSetShader(this->m_PixelShader.Get(), nullptr, 0);
+		}
 
 		pd3dDeviceContext->DrawIndexed(m_IndexCount, 0, 0);
 	}
