@@ -27,6 +27,15 @@
     <ClInclude Include="Dx11Engine.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Dx11Model.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Dx11Shader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Dx11Camera.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

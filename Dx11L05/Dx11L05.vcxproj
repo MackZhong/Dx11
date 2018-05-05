@@ -171,6 +171,9 @@ Copy /Y "$(ProjectDir)*.ico" "$(ProjectDir)Output"</Command>
 Copy /Y "$(ProjectDir)*.hlsli" "$(ProjectDir)Output\Shaders"
 Copy /Y "$(ProjectDir)*.ico" "$(ProjectDir)Output"</Command>
     </PostBuildEvent>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -192,11 +195,15 @@ Copy /Y "$(ProjectDir)*.ico" "$(ProjectDir)Output"</Command>
 Copy /Y "$(ProjectDir)*.hlsli" "$(ProjectDir)Output\Shaders"
 Copy /Y "$(ProjectDir)*.ico" "$(ProjectDir)Output"</Command>
     </PostBuildEvent>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="D3D11Engine.cpp" />
     <ClCompile Include="Dx11Graphics.cpp" />
     <ClCompile Include="Dx11Input.cpp" />
+    <ClCompile Include="Dx11L05.cpp" />
     <ClCompile Include="Dx11System.cpp" />
     <ClCompile Include="DxCamera.cpp" />
     <ClCompile Include="DxColorShader.cpp" />

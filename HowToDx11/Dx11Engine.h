@@ -1,71 +1,57 @@
 #pragma once
-#include <d3d11_4.h>
-#include <dxgi1_6.h>
-#pragma comment(lib, "d3d11.lib")
-#pragma comment(lib, "dxguid.lib")
-#include <DirectXMath.h>
-using namespace DirectX;
-#include <d3dcompiler.h>
-#pragma comment(lib,"d3dcompiler.lib")
+#include "Dx11Model.h"
+#include "Dx11Camera.h"
 
-#include <wrl.h>
-namespace MWRL = Microsoft::WRL;
+using namespace DirectX;
+using namespace Microsoft::WRL;
 
 class Dx11Engine
 {
 public:
 
 private:
-	// Define the data-type that
-	// describes a vertex.
-	struct SimpleVertexCombined
-	{
-		XMFLOAT3 Pos;
-		XMFLOAT3 Color;
-	};
-	D3D11_INPUT_ELEMENT_DESC layout[2]{
-		{ "POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, 0, D3D11_INPUT_PER_VERTEX_DATA, 0 },
-	{ "COLOR", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, D3D11_APPEND_ALIGNED_ELEMENT, D3D11_INPUT_PER_VERTEX_DATA, 0 },
-	//{ L"TEXCOORD", 0, DXGI_FORMAT_R32G32_FLOAT, 0, D3D11_APPEND_ALIGNED_ELEMENT,	D3D11_INPUT_PER_VERTEX_DATA, 0 },
-	//{ L"NORMAL", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, D3D11_APPEND_ALIGNED_ELEMENT,	D3D11_INPUT_PER_VERTEX_DATA, 0 },
-	};
-
-
-	HWND g_hWnd{ NULL };
+	HWND m_hWnd{ NULL };
 	int m_Width{ 800 };
 	int m_Height{ 600 };
-	MWRL::ComPtr<IDXGISwapChain>		g_pSwapChain{ nullptr };
-	MWRL::ComPtr<ID3D11Device>			g_pd3dDevice{ nullptr };
-	MWRL::ComPtr<ID3D11DeviceContext>	g_pImmediateContext{ nullptr };
-	MWRL::ComPtr<ID3D11RenderTargetView>	g_pRenderTargetView{ nullptr };
-	MWRL::ComPtr<ID3D11Buffer>			g_pVertexBuffer{ nullptr };
-	MWRL::ComPtr<ID3D11Buffer>			g_pIndexBuffer{ nullptr };
-	MWRL::ComPtr<ID3D11InputLayout>			g_pVertexLayout{ nullptr };
-	MWRL::ComPtr<ID3D11VertexShader>			m_VertexShader{ nullptr };
-	MWRL::ComPtr<ID3D11PixelShader>			m_PixelShader{ nullptr };
+	bool m_vSync{ false };
+	DXGI_SAMPLE_DESC m_SampleDesc{ 1, 0 };
+	DXGI_FORMAT m_BufferFormat{ DXGI_FORMAT_R8G8B8A8_UNORM };
+	ComPtr<ID3D11Device>			m_pd3dDevice{ nullptr };
+	ComPtr<ID3D11DeviceContext>	m_pImmediateContext{ nullptr };
+	ComPtr<IDXGISwapChain>		m_pSwapChain{ nullptr };
+	ComPtr<ID3D11RenderTargetView>	m_pRenderTargetView{ nullptr };
+	ComPtr<ID3D11DepthStencilView> m_pDepthStencilView{ nullptr };
+	ComPtr<ID3D11Texture2D>			m_pDepthStencilBuffer{ nullptr };
+	ComPtr<ID3D11DepthStencilState>	m_pDepthStencilState{ nullptr };
+	ComPtr < ID3D11RasterizerState>	m_pRasterizerState{ nullptr };
+	ComPtr<ID3D11Buffer>	m_AppConstantBuffer{ nullptr };
+	ComPtr<ID3D11Buffer>	m_FrameConstantBuffer{ nullptr };
+	XMMATRIX m_ProjectionMatrix;
+	std::unique_ptr<Dx11Camera> m_Camera{ nullptr };
+	std::unique_ptr<Dx11Model>	m_Model{ nullptr };
 
 private:
+	DXGI_RATIONAL QueryRefreshRate() {
+		return { 60, 1 };
+	}
+
 	// How To: Create a Device and Immediate Context
 	HRESULT CreateDeviceandContext() {
 		HRESULT hr;
 
-		DXGI_SWAP_CHAIN_DESC sd;
-		ZeroMemory(&sd, sizeof(sd));
+		DXGI_SWAP_CHAIN_DESC sd{ 0 };
 		sd.BufferCount = 1;
 		sd.BufferDesc.Width = this->m_Width;
 		sd.BufferDesc.Height = this->m_Height;
-		sd.BufferDesc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;
-		sd.BufferDesc.RefreshRate.Numerator = 60;
-		sd.BufferDesc.RefreshRate.Denominator = 1;
+		sd.BufferDesc.Format = m_BufferFormat;
+		sd.BufferDesc.RefreshRate = QueryRefreshRate();
 		sd.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;
-		sd.OutputWindow = this->g_hWnd;
-		sd.SampleDesc.Count = 1;
-		sd.SampleDesc.Quality = 0;
+		sd.OutputWindow = this->m_hWnd;
+		sd.SampleDesc = m_SampleDesc;
 		sd.Windowed = TRUE;
 
 		//D3D_FEATURE_LEVEL  FeatureLevelsRequested = D3D_FEATURE_LEVEL_11_0;
 		//UINT               numFeatureLevelsRequested = 1;
-		D3D_FEATURE_LEVEL  FeatureLevelsSupported;
 		//hr = D3D11CreateDeviceAndSwapChain(NULL,
 		//	D3D_DRIVER_TYPE_HARDWARE,
 		//	NULL,
@@ -85,9 +71,6 @@ private:
 		//}
 
 		const D3D_FEATURE_LEVEL lvl[] = {
-			//D3D_FEATURE_LEVEL_11_4,
-			//D3D_FEATURE_LEVEL_11_3,
-			//D3D_FEATURE_LEVEL_11_2,
 			D3D_FEATURE_LEVEL_11_1,
 			D3D_FEATURE_LEVEL_11_0,
 			D3D_FEATURE_LEVEL_10_1,
@@ -102,18 +85,18 @@ private:
 		createDeviceFlags |= D3D11_CREATE_DEVICE_DEBUG;
 #endif
 
-		//ID3D11Device* device = nullptr;
+		D3D_FEATURE_LEVEL  FeatureLevelsSupported;
 		hr = D3D11CreateDeviceAndSwapChain(nullptr,
 			D3D_DRIVER_TYPE_HARDWARE,
 			nullptr, createDeviceFlags,
 			lvl, _countof(lvl),
 			D3D11_SDK_VERSION,
 			&sd,
-			this->g_pSwapChain.ReleaseAndGetAddressOf(),
-			this->g_pd3dDevice.ReleaseAndGetAddressOf(),
+			this->m_pSwapChain.ReleaseAndGetAddressOf(),
+			this->m_pd3dDevice.ReleaseAndGetAddressOf(),
 			&FeatureLevelsSupported,
-			this->g_pImmediateContext.ReleaseAndGetAddressOf());
-		if (hr == E_INVALIDARG)
+			this->m_pImmediateContext.ReleaseAndGetAddressOf());
+		if (FAILED(hr))
 		{
 			hr = D3D11CreateDeviceAndSwapChain(nullptr,
 				D3D_DRIVER_TYPE_HARDWARE,
@@ -121,153 +104,108 @@ private:
 				&lvl[1], _countof(lvl) - 1,
 				D3D11_SDK_VERSION,
 				&sd,
-				this->g_pSwapChain.ReleaseAndGetAddressOf(),
-				this->g_pd3dDevice.ReleaseAndGetAddressOf(),
+				this->m_pSwapChain.ReleaseAndGetAddressOf(),
+				this->m_pd3dDevice.ReleaseAndGetAddressOf(),
 				&FeatureLevelsSupported,
-				this->g_pImmediateContext.ReleaseAndGetAddressOf());
+				this->m_pImmediateContext.ReleaseAndGetAddressOf());
 		}
 		if (FAILED(hr)) {
 			return hr;
 		}
 
-		MWRL::ComPtr<ID3D11Texture2D> pBackBuffer;
-
-		// Get a pointer to the back buffer
-		hr = this->g_pSwapChain->GetBuffer(0, __uuidof(ID3D11Texture2D), (LPVOID*)pBackBuffer.ReleaseAndGetAddressOf());
-
-		// Create a render-target view
-		this->g_pd3dDevice->CreateRenderTargetView(pBackBuffer.Get(), NULL,
-			this->g_pRenderTargetView.ReleaseAndGetAddressOf());
-
-		// Bind the view
-		ID3D11RenderTargetView* targets[1];
-		targets[0] = this->g_pRenderTargetView.Get();
-		this->g_pImmediateContext->OMSetRenderTargets(1, targets, NULL);
-
-		// Setup the viewport
-		D3D11_VIEWPORT vp;
-		vp.Width = (FLOAT)this->m_Width;
-		vp.Height = (FLOAT)this->m_Height;
-		vp.MinDepth = 0.0F;
-		vp.MaxDepth = 1.0F;
-		vp.TopLeftX = 0.0F;
-		vp.TopLeftY = 0.0F;
-		this->g_pImmediateContext->RSSetViewports(1, &vp);
-
-		return hr;
-	}
-
-	HRESULT CompileShader(_In_ LPCWSTR srcFile, _In_ LPCSTR entryPoint, _In_ LPCSTR profile, _Outptr_ ID3DBlob** blob)
-	{
-		if (!srcFile || !entryPoint || !profile || !blob)
-			return E_INVALIDARG;
-
-		*blob = nullptr;
-
-		UINT flags = D3DCOMPILE_ENABLE_STRICTNESS;
-#if defined( DEBUG ) || defined( _DEBUG )
-		flags |= D3DCOMPILE_DEBUG;
-#endif
-
-		const D3D_SHADER_MACRO defines[] =
 		{
-			"EXAMPLE_DEFINE", "1",
-			NULL, NULL
-		};
+			ComPtr<ID3D11Texture2D> pBackBuffer;
 
-		ID3DBlob* shaderBlob = nullptr;
-		MWRL::ComPtr<ID3DBlob> errorBlob = nullptr;
-		HRESULT hr = D3DCompileFromFile(srcFile, defines, D3D_COMPILE_STANDARD_FILE_INCLUDE,
-			entryPoint, profile,
-			flags, 0, &shaderBlob, &errorBlob);
-		if (FAILED(hr))
-		{
-			if (errorBlob)
-			{
-				OutputDebugStringA((char*)errorBlob->GetBufferPointer());
-			}
+			// Get a pointer to the back buffer
+			hr = this->m_pSwapChain->GetBuffer(0, __uuidof(ID3D11Texture2D), (LPVOID*)pBackBuffer.ReleaseAndGetAddressOf());
 
-			if (shaderBlob)
-				shaderBlob->Release();
+			// Create a render-target view
+			this->m_pd3dDevice->CreateRenderTargetView(pBackBuffer.Get(), NULL,
+				this->m_pRenderTargetView.ReleaseAndGetAddressOf());
 
-			return hr;
+			// Bind the view
+			ID3D11RenderTargetView* targets[1];
+			targets[0] = this->m_pRenderTargetView.Get();
+			this->m_pImmediateContext->OMSetRenderTargets(1, targets, NULL);
 		}
 
-		*blob = shaderBlob;
+		{
+			// create the depth buffer for use with depth/stencil view
+			D3D11_TEXTURE2D_DESC depthStencilBufferDesc{ 0 };
+			depthStencilBufferDesc.ArraySize = 1;
+			depthStencilBufferDesc.BindFlags = D3D11_BIND_DEPTH_STENCIL;
+			//depthStencilBufferDesc.CPUAccessFlags = D3D11_CPU_ACCESS_READ;
+			depthStencilBufferDesc.Format = DXGI_FORMAT_D24_UNORM_S8_UINT;
+			depthStencilBufferDesc.Width = m_Width;
+			depthStencilBufferDesc.Height = m_Height;
+			depthStencilBufferDesc.MipLevels = 1;
+			depthStencilBufferDesc.SampleDesc = m_SampleDesc;
+			depthStencilBufferDesc.Usage = D3D11_USAGE_DEFAULT;
+			hr = m_pd3dDevice->CreateTexture2D(&depthStencilBufferDesc, nullptr, this->m_pDepthStencilBuffer.ReleaseAndGetAddressOf());
+			if (FAILED(hr)) {
+				return hr;
+			}
 
+			// create depth stencil view
+			//D3D11_DEPTH_STENCIL_VIEW_DESC depthStencilViewDesc{ 0 };
+			hr = m_pd3dDevice->CreateDepthStencilView(this->m_pDepthStencilBuffer.Get(), nullptr, this->m_pDepthStencilView.ReleaseAndGetAddressOf());
+		}
+
+		{
+			// Depth stencil state
+			D3D11_DEPTH_STENCIL_DESC depthStencilStateDesc{ 0 };
+			depthStencilStateDesc.DepthEnable = TRUE;
+			depthStencilStateDesc.DepthWriteMask = D3D11_DEPTH_WRITE_MASK_ALL;
+			depthStencilStateDesc.DepthFunc = D3D11_COMPARISON_LESS;
+			depthStencilStateDesc.StencilEnable = FALSE;
+			hr = m_pd3dDevice->CreateDepthStencilState(&depthStencilStateDesc, this->m_pDepthStencilState.ReleaseAndGetAddressOf());
+			if (FAILED(hr)) {
+				return hr;
+			}
+
+			// Rasterizer state
+			D3D11_RASTERIZER_DESC rasterizerDesc;
+			ZeroMemory(&rasterizerDesc, sizeof(rasterizerDesc));
+			rasterizerDesc.AntialiasedLineEnable = FALSE;
+			rasterizerDesc.CullMode = D3D11_CULL_BACK;
+			rasterizerDesc.DepthBias = 0;
+			rasterizerDesc.DepthBiasClamp = 0.0f;
+			rasterizerDesc.DepthClipEnable = TRUE;
+			rasterizerDesc.FillMode = D3D11_FILL_SOLID;
+			rasterizerDesc.FrontCounterClockwise = FALSE;
+			rasterizerDesc.MultisampleEnable = FALSE;
+			rasterizerDesc.ScissorEnable = FALSE;
+			rasterizerDesc.SlopeScaledDepthBias = 0.0f;
+			hr = m_pd3dDevice->CreateRasterizerState(&rasterizerDesc, this->m_pRasterizerState.ReleaseAndGetAddressOf());
+			if (FAILED(hr)) return hr;
+		}
+
+		{
+			// Setup the viewport
+			D3D11_VIEWPORT vp;
+			vp.Width = (FLOAT)this->m_Width;
+			vp.Height = (FLOAT)this->m_Height;
+			vp.MinDepth = 0.0F;
+			vp.MaxDepth = 1.0F;
+			vp.TopLeftX = 0.0F;
+			vp.TopLeftY = 0.0F;
+			this->m_pImmediateContext->RSSetViewports(1, &vp);
+		}
+		// https://www.3dgep.com/introduction-to-directx-11
 		return hr;
 	}
 
 	HRESULT CreateResources() {
-		HRESULT hr;
+		HRESULT hr = S_OK;
 
-		// Supply the actual vertex data.
-		SimpleVertexCombined verticesCombo[] =
-		{
-			XMFLOAT3(0.0f, 0.5f, 0.5f), XMFLOAT3(0.0f, 0.0f, 0.5f),
-			XMFLOAT3(0.5f, -0.5f, 0.5f), XMFLOAT3(0.5f, 0.0f, 0.0f),
-			XMFLOAT3(-0.5f, -0.5f, 0.5f), XMFLOAT3(0.0f, 0.5f, 0.0f),
-		};
+		m_Camera = std::make_unique<Dx11Camera>();
 
-		// Fill in a buffer description.
-		D3D11_BUFFER_DESC bufferDesc;
-		bufferDesc.Usage = D3D11_USAGE_DEFAULT;
-		bufferDesc.ByteWidth = sizeof(verticesCombo);
-		bufferDesc.BindFlags = D3D11_BIND_VERTEX_BUFFER;
-		bufferDesc.CPUAccessFlags = 0;
-		bufferDesc.MiscFlags = 0;
+		m_Model = std::make_unique<Dx11Model>();
+		if (m_Model) {
+			return m_Model->Initialize(m_pd3dDevice.Get());
+		}
 
-		// Fill in the subresource data.
-		D3D11_SUBRESOURCE_DATA InitData;
-		InitData.pSysMem = verticesCombo;
-		InitData.SysMemPitch = 0;
-		InitData.SysMemSlicePitch = 0;
-
-		// Create the vertex buffer.
-		hr = this->g_pd3dDevice->CreateBuffer(&bufferDesc, &InitData, this->g_pVertexBuffer.ReleaseAndGetAddressOf());
-
-		// Create indices.
-		unsigned short indices[] = { 0, 1, 2 };
-
-		// Fill in a buffer description.
-		bufferDesc.ByteWidth = sizeof(indices);
-		bufferDesc.BindFlags = D3D11_BIND_INDEX_BUFFER;
-
-		// Define the resource data.
-		InitData.pSysMem = indices;
-
-		// Create the buffer with the device.
-		hr = this->g_pd3dDevice->CreateBuffer(&bufferDesc, &InitData, this->g_pIndexBuffer.ReleaseAndGetAddressOf());
-		if (FAILED(hr))
-			return hr;
-
-		UINT flags = D3DCOMPILE_ENABLE_STRICTNESS;
-#if defined( DEBUG ) || defined( _DEBUG )
-		flags |= D3DCOMPILE_DEBUG;
-#endif
-		// Prefer higher CS shader profile when possible as CS 5.0 provides better performance on 11-class hardware.
-		const D3D_SHADER_MACRO defines[] =
-		{
-			"EXAMPLE_DEFINE", "1",
-			NULL, NULL
-		};
-		ID3DBlob* errorBlob = nullptr;
-		LPCSTR profile = (this->g_pd3dDevice->GetFeatureLevel() >= D3D_FEATURE_LEVEL_11_0) ? "vs_5_0" : "vs_4_0";
-		MWRL::ComPtr<ID3DBlob> VSshaderBlob = nullptr;
-		hr = this->CompileShader(L"VertexShader.hlsl", "main", profile, VSshaderBlob.ReleaseAndGetAddressOf());
-		profile = (this->g_pd3dDevice->GetFeatureLevel() >= D3D_FEATURE_LEVEL_11_0) ? "ps_5_0" : "ps_4_0";
-		MWRL::ComPtr<ID3DBlob> PSshaderBlob = nullptr;
-		hr = this->CompileShader(L"PixelShader.hlsl", "main", profile, PSshaderBlob.ReleaseAndGetAddressOf());
-
-		hr = this->g_pd3dDevice->CreateVertexShader(VSshaderBlob->GetBufferPointer(), VSshaderBlob->GetBufferSize(),
-			nullptr, this->m_VertexShader.ReleaseAndGetAddressOf());
-		hr = this->g_pd3dDevice->CreatePixelShader(PSshaderBlob->GetBufferPointer(), PSshaderBlob->GetBufferSize(),
-			nullptr, this->m_PixelShader.ReleaseAndGetAddressOf());
-
-		hr = this->g_pd3dDevice->CreateInputLayout(this->layout, 2, VSshaderBlob->GetBufferPointer(), VSshaderBlob->GetBufferSize(),
-			this->g_pVertexLayout.ReleaseAndGetAddressOf());
-
-		return hr;
+		return E_FAIL;
 	}
 
 public:
@@ -277,8 +215,10 @@ public:
 	~Dx11Engine() {};
 
 
-	HRESULT Initialize(HWND hWnd) {
-		this->g_hWnd = hWnd;
+	HRESULT Initialize(HWND hWnd, int width, int height) {
+		this->m_hWnd = hWnd;
+		this->m_Width = width;
+		this->m_Height = height;
 
 		HRESULT hr = this->CreateDeviceandContext();
 		if (FAILED(hr)) {
@@ -287,25 +227,26 @@ public:
 		return this->CreateResources();
 	}
 
-	void Render() {
+	void Destroy() {
+
+	}
+
+	HRESULT UpdateFrame(float deltaTime) {
+		HRESULT hr = S_OK;
+		if (m_Model) {
+			m_Model->Update(deltaTime);
+		}
+		return hr;
+	}
+
+	void DrawFrame() const {
 		FLOAT bkClr[4] = { 0.0F, 0.0F, 1.0F, 1.0F };
-		this->g_pImmediateContext->ClearRenderTargetView(this->g_pRenderTargetView.Get(), bkClr);
+		this->m_pImmediateContext->ClearRenderTargetView(this->m_pRenderTargetView.Get(), bkClr);
 
-		UINT stride = sizeof(SimpleVertexCombined);
-		UINT offset = 0;
-		this->g_pImmediateContext->IASetVertexBuffers(0, 1, this->g_pVertexBuffer.GetAddressOf(), &stride, &offset);
-		// Set the input layout
-		this->g_pImmediateContext->IASetInputLayout(this->g_pVertexLayout.Get());
-		// Set the buffer.
-		this->g_pImmediateContext->IASetIndexBuffer(this->g_pIndexBuffer.Get(), DXGI_FORMAT_R16_UINT, 0);
-		this->g_pImmediateContext->IASetPrimitiveTopology(D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
+		if (m_Model) {
+			m_Model->Render(this->m_pImmediateContext.Get(), m_Camera->View(), m_ProjectionMatrix);
+		}
 
-		this->g_pImmediateContext->VSSetShader(this->m_VertexShader.Get(), nullptr, 0);
-
-		this->g_pImmediateContext->PSSetShader(this->m_PixelShader.Get(), nullptr, 0);
-
-		this->g_pImmediateContext->DrawIndexed(3, 0, 0);
-
-		this->g_pSwapChain->Present(0, 0);
+		this->m_pSwapChain->Present(0, 0);
 	}
 };
