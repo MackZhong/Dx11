@@ -5,6 +5,15 @@
 
 struct VS_OUTPUT
 {
+	float2 texCoord : TEXCOORD0;
+	float4 positionWorld : TEXCOORD1;
+	float3 normalWorld : TEXCOORD2;
 	float4 vPosition : SV_POSITION;
-	float4 color : COLOR;
+};
+
+struct PS_INPUT
+{
+	float2 texCoord : TEXCOORD0;
+	float4 positionWorld : TEXCOORD1;
+	float3 normalWorld : TEXCOORD2;
 };
